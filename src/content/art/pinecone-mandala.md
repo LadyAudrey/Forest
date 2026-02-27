@@ -6,7 +6,7 @@ tags: ["mandala", "nature", "fractal"]
 published: true
 featured: true
 medium: "Digital — kaleidoscopic composition"
-image: "/yours-truly-main/art/mandalas/pinecone-mandala.png"
+image: "/Forest/art/mandalas/pinecone-mandala.png"
 ai_assisted: true
 ai_notes: "Claude wrote title, description, and body text for the art listing"
 ---

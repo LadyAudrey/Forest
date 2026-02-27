@@ -5,7 +5,7 @@ date: 2026-02-26
 tags: ["portrait", "duality", "connection", "abstract", "roots", "reflection"]
 published: true
 medium: "AI-generated digital art"
-image: "/yours-truly-main/art/whispers/kindred-canopy.jpg"
+image: "/Forest/art/whispers/kindred-canopy.jpg"
 ai_assisted: true
 ai_generated: true
 ai_notes: "AI-generated image. Claude wrote title, description, tags, and body text."
