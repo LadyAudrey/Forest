@@ -7,6 +7,7 @@ published: true
 medium: "AI-generated digital art"
 image: "/yours-truly/art/portraits/evergreen-wellspring.jpg"
 ai_assisted: true
+ai_generated: true
 ai_notes: "AI-generated image. Claude wrote title, description, tags, and body text."
 ---
 

@@ -66,13 +66,17 @@ const allWorlds = [...new Set(allScenes.map((s) => s.data.world).filter(Boolean)
         {allScenes.map((scene) => (
           <a
             href={`${base}/writing/${scene.slug}/`}
-            class="scene-card group block p-4 rounded-lg border border-border hover:border-accent transition-colors"
+            class="scene-card group block rounded-lg border border-border hover:border-accent transition-colors overflow-hidden sm:flex"
             data-title={scene.data.title.toLowerCase()}
             data-tags={JSON.stringify(scene.data.tags)}
             data-characters={JSON.stringify(scene.data.characters ?? [])}
             data-world={scene.data.world ?? ''}
             data-description={(scene.data.description ?? '').toLowerCase()}
           >
+            {scene.data.cover && (
+              <img src={scene.data.cover} alt="" class="hidden sm:block w-32 object-cover flex-shrink-0" />
+            )}
+            <div class="p-4 flex-1">
             <h3 class="font-semibold group-hover:text-accent transition-colors">{scene.data.title}</h3>
             {scene.data.description && (
               <p class="mt-1 text-sm text-text-secondary">{scene.data.description}</p>
@@ -87,6 +91,7 @@ const allWorlds = [...new Set(allScenes.map((s) => s.data.world).filter(Boolean)
               {scene.data.tags.map((tag: string) => (
                 <span class="text-xs px-2 py-0.5 rounded-full bg-bg-muted text-text-muted">{tag}</span>
               ))}
+            </div>
             </div>
           </a>
         ))}

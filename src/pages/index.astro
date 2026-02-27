@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
-const recentArt = (await getCollection('art', ({ data }) => data.published))
+const recentArt = (await getCollection('art', ({ data }) => data.published && !data.ai_generated))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
 

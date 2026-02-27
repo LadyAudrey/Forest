@@ -43,6 +43,7 @@ const art = defineCollection({
   schema: baseSchema.extend({
     medium: z.string().optional(),
     image: z.string().optional(),
+    ai_generated: z.boolean().default(false),
   }),
 });
 

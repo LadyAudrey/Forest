@@ -4,35 +4,94 @@ import { getCollection } from 'astro:content';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
-const art = (await getCollection('art', ({ data }) => data.published))
+const allArt = (await getCollection('art', ({ data }) => data.published))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const handmadeArt = allArt.filter((piece) => !piece.data.ai_generated);
+const aiArt = allArt.filter((piece) => piece.data.ai_generated);
 ---
 
 <BaseLayout title="Art — Audrey Evergreene">
   <h1 class="text-3xl font-bold mb-8">Art</h1>
 
-  {art.length === 0 ? (
+  {allArt.length === 0 ? (
     <p class="text-text-secondary">
       Art is on its way. Check back soon!
     </p>
   ) : (
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      {art.map((piece) => (
-        <a href={`${base}/art/${piece.slug}/`} class="group block rounded-lg border border-border hover:border-accent transition-colors overflow-hidden">
-          {piece.data.image && (
-            <img src={piece.data.image} alt={piece.data.title} class="w-full aspect-[4/3] object-cover" />
-          )}
-          <div class="p-4">
-            <h3 class="text-lg font-semibold group-hover:text-accent transition-colors">{piece.data.title}</h3>
-            {piece.data.description && (
-              <p class="mt-1 text-sm text-text-secondary">{piece.data.description}</p>
+    <div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {handmadeArt.map((piece) => (
+          <a href={`${base}/art/${piece.slug}/`} class="group block rounded-lg border border-border hover:border-accent transition-colors overflow-hidden">
+            {piece.data.image && (
+              <img src={piece.data.image} alt={piece.data.title} class="w-full aspect-[4/3] object-cover" />
             )}
-            {piece.data.medium && (
-              <p class="mt-2 text-xs text-text-muted">{piece.data.medium}</p>
-            )}
+            <div class="p-4">
+              <h3 class="text-lg font-semibold group-hover:text-accent transition-colors">{piece.data.title}</h3>
+              {piece.data.description && (
+                <p class="mt-1 text-sm text-text-secondary">{piece.data.description}</p>
+              )}
+              {piece.data.medium && (
+                <p class="mt-2 text-xs text-text-muted">{piece.data.medium}</p>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {aiArt.length > 0 && (
+        <div class="mt-12">
+          <button
+            id="ai-art-toggle"
+            class="px-4 py-2 rounded-lg border border-border text-text-secondary hover:border-accent hover:text-accent transition-colors text-sm"
+          >
+            Show AI-generated art
+          </button>
+
+          <div id="ai-art-section" class="hidden mt-6">
+            <p class="text-xs text-text-muted mb-4">
+              These pieces were generated with AI tools. They're part of the creative process, but they're not my hand-made work.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {aiArt.map((piece) => (
+                <a href={`${base}/art/${piece.slug}/`} class="group block rounded-lg border border-border hover:border-accent transition-colors overflow-hidden">
+                  {piece.data.image && (
+                    <img src={piece.data.image} alt={piece.data.title} class="w-full aspect-[4/3] object-cover" />
+                  )}
+                  <div class="p-4">
+                    <h3 class="text-lg font-semibold group-hover:text-accent transition-colors">{piece.data.title}</h3>
+                    {piece.data.description && (
+                      <p class="mt-1 text-sm text-text-secondary">{piece.data.description}</p>
+                    )}
+                    {piece.data.medium && (
+                      <p class="mt-2 text-xs text-text-muted">{piece.data.medium}</p>
+                    )}
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
-        </a>
-      ))}
+        </div>
+      )}
     </div>
   )}
 </BaseLayout>
+
+<script>
+  function setupAiToggle() {
+    const toggle = document.getElementById('ai-art-toggle');
+    const section = document.getElementById('ai-art-section');
+    if (!toggle || !section) return;
+
+    toggle.addEventListener('click', () => {
+      const isHidden = section.classList.contains('hidden');
+      section.classList.toggle('hidden');
+      toggle.textContent = isHidden
+        ? 'Hide AI-generated art'
+        : 'Show AI-generated art';
+    });
+  }
+
+  setupAiToggle();
+  document.addEventListener('astro:after-swap', setupAiToggle);
+</script>
