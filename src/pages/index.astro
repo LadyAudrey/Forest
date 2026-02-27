@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentCard from '../components/ContentCard.astro';
+import { getCollection } from 'astro:content';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const recentArt = (await getCollection('art', ({ data }) => data.published))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const recentPoetry = (await getCollection('writing', ({ data }) => data.published && data.genre === 'poetry'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const recentScenes = (await getCollection('writing', ({ data }) => data.published && data.genre === 'fiction'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const readingTime = (body: string) => {
+  const words = body.trim().split(/\s+/).length;
+  const minutes = Math.max(1, Math.round(words / 200));
+  return `${minutes} min read`;
+};
+
+const thumbnails = [
+  'art/mandalas/amber-lattice.png',
+  'art/portraits/tidal-reverie.jpg',
+  'art/mandalas/forest-bloom.png',
+  'art/portraits/solar-awakening.jpg',
+  'art/mandalas/ginkgo-mandala-landscape.png',
+  'art/portraits/evergreen-wellspring.jpg',
+  'art/mandalas/luminous-bloom.png',
+  'art/mandalas/pinecone-mandala.png',
+  'art/mandalas/rose-quartz-bloom.png',
+  'art/mandalas/stained-glass-lotus.png',
+  'art/mandalas/teal-petals.png',
+];
+---
+
+<BaseLayout title="AnEvergreene Forest — art, rooted in love">
+  <!-- Hero section -->
+  <section class="py-12 sm:py-20 text-center">
+    <div class="mb-8">
+      <!-- Replace with your logo or photo -->
+      <div class="w-24 h-24 mx-auto rounded-full bg-bg-accent flex items-center justify-center text-accent text-3xl font-bold">
+        ?
+      </div>
+    </div>
+    <h1 class="font-script text-5xl sm:text-6xl mb-4 glow-text-subtle bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fdfaec 0%, #EFDD8D 30%, #e6cb5a 50%, #FAB2EA 75%, #fdd9f5 100%);">
+      AnEvergreene Forest
+    </h1>
+    <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+      art, rooted in love
+    </p>
+  </section>
+
+  <!-- Art -->
+  {recentArt.length > 0 && (
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-heading font-bold">Art</h2>
+        <a href={`${base}/art/`} class="text-sm text-accent hover:underline">View all &rarr;</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {recentArt.map((piece) => (
+          <a href={`${base}/art/${piece.slug}/`} class="group block rounded-lg border border-border hover:border-accent bg-surface transition-colors overflow-hidden">
+            {piece.data.image && (
+              <img src={piece.data.image} alt={piece.data.title} class="w-full aspect-[4/3] object-cover" />
+            )}
+            <div class="p-3">
+              <h3 class="text-sm font-semibold group-hover:text-accent group-hover:scale-105 origin-left transition-all">{piece.data.title}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Whispers of the Heartwood -->
+  {recentScenes.length > 0 && (
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-heading font-bold">Whispers of the Heartwood</h2>
+        <a href={`${base}/whispers/`} class="text-sm text-accent hover:underline">Explore &rarr;</a>
+      </div>
+      <div class="grid gap-4">
+        {recentScenes.map((scene) => (
+          <a href={`${base}/writing/${scene.slug}/`} class="group block rounded-lg border border-border hover:border-accent bg-surface transition-colors overflow-hidden sm:flex">
+            {scene.data.cover && (
+              <img src={scene.data.cover} alt="" class="hidden sm:block w-32 object-cover flex-shrink-0" />
+            )}
+            <div class="p-5 flex-1">
+              <h3 class="font-semibold group-hover:text-accent group-hover:scale-105 origin-left transition-all">{scene.data.title}</h3>
+              {scene.data.description && (
+                <p class="mt-1 text-sm text-text-secondary">{scene.data.description}</p>
+              )}
+              <div class="mt-2 flex flex-wrap items-center gap-2">
+                {scene.data.world && (
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-bg-accent text-accent">{scene.data.world}</span>
+                )}
+                {(scene.data.characters ?? []).map((char: string) => (
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-tag-bg text-tag-text">{char}</span>
+                ))}
+              </div>
+              <p class="mt-2 text-xs text-text-muted text-right">{readingTime(scene.body)}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Poetry -->
+  {recentPoetry.length > 0 && (
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-heading font-bold">Poetry</h2>
+        <a href={`${base}/poetry/`} class="text-sm text-accent hover:underline">View all &rarr;</a>
+      </div>
+      <div class="grid gap-4">
+        {recentPoetry.map((poem, i) => (
+          <a href={`${base}/writing/${poem.slug}/`} class="group block rounded-lg border border-border hover:border-accent bg-surface transition-colors overflow-hidden sm:flex">
+            <img
+              src={`${base}/${thumbnails[i % thumbnails.length]}`}
+              alt=""
+              class="hidden sm:block w-32 max-h-36 object-cover flex-shrink-0"
+            />
+            <div class="p-5 flex-1">
+              <h3 class="font-semibold group-hover:text-accent group-hover:scale-105 origin-left transition-all">{poem.data.title}</h3>
+              {poem.data.description && (
+                <p class="mt-1 text-sm text-text-secondary">{poem.data.description}</p>
+              )}
+              <div class="mt-2 flex flex-wrap items-center gap-2">
+                {poem.data.tags.slice(0, 3).map((tag) => (
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-tag-bg text-tag-text">{tag}</span>
+                ))}
+              </div>
+              <p class="mt-2 text-xs text-text-muted text-right">{readingTime(poem.body)}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

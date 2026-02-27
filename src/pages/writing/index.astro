@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentCard from '../../components/ContentCard.astro';
+import { getCollection } from 'astro:content';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const writing = (await getCollection('writing', ({ data }) => data.published))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Group by genre
+const fiction = writing.filter((w) => w.data.genre === 'fiction');
+const nonfiction = writing.filter((w) => w.data.genre === 'nonfiction');
+const poetry = writing.filter((w) => w.data.genre === 'poetry');
+const other = writing.filter((w) => !w.data.genre);
+---
+
+<BaseLayout title="Writing — Audrey Evergreene">
+  <h1 class="text-3xl font-bold mb-8">Writing</h1>
+
+  {writing.length === 0 ? (
+    <p class="text-text-secondary">
+      No writing yet. Add markdown files to <code>src/content/writing/</code> to get started.
+    </p>
+  ) : (
+    <div class="space-y-12">
+      {fiction.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-semibold mb-4">Fiction</h2>
+          <div class="grid gap-4">
+            {fiction.map((piece) => (
+              <ContentCard
+                title={piece.data.title}
+                description={piece.data.description}
+                href={`${base}/writing/${piece.slug}/`}
+                date={piece.data.date}
+                tags={piece.data.tags}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {nonfiction.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-semibold mb-4">Nonfiction</h2>
+          <div class="grid gap-4">
+            {nonfiction.map((piece) => (
+              <ContentCard
+                title={piece.data.title}
+                description={piece.data.description}
+                href={`${base}/writing/${piece.slug}/`}
+                date={piece.data.date}
+                tags={piece.data.tags}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {poetry.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-semibold mb-4">Poetry</h2>
+          <div class="grid gap-4">
+            {poetry.map((piece) => (
+              <ContentCard
+                title={piece.data.title}
+                description={piece.data.description}
+                href={`${base}/writing/${piece.slug}/`}
+                date={piece.data.date}
+                tags={piece.data.tags}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {other.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-semibold mb-4">Other</h2>
+          <div class="grid gap-4">
+            {other.map((piece) => (
+              <ContentCard
+                title={piece.data.title}
+                description={piece.data.description}
+                href={`${base}/writing/${piece.slug}/`}
+                date={piece.data.date}
+                tags={piece.data.tags}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  )}
+</BaseLayout>

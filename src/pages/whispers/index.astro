@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const allScenes = (await getCollection('writing', ({ data }) => data.published && data.genre === 'fiction'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Collect all unique tags, characters, and worlds for filtering
+const allTags = [...new Set(allScenes.flatMap((s) => s.data.tags))].sort();
+const allCharacters = [...new Set(allScenes.flatMap((s) => s.data.characters ?? []))].sort();
+const allWorlds = [...new Set(allScenes.map((s) => s.data.world).filter(Boolean))].sort();
+---
+
+<BaseLayout title="Whispers of the Heartwood — Audrey Evergreene">
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold mb-2">Whispers of the Heartwood</h1>
+    <p class="text-text-secondary">A story told in scenes, across worlds and generations</p>
+  </div>
+
+  {allScenes.length === 0 ? (
+    <p class="text-text-secondary">
+      Scenes are coming soon. The heartwood is still whispering.
+    </p>
+  ) : (
+    <div>
+      <!-- Search & filter bar -->
+      <div class="mb-6 space-y-3">
+        <input
+          type="text"
+          id="scene-search"
+          placeholder="Search by title, character, or keyword..."
+          class="w-full px-4 py-2 rounded-lg border border-border bg-surface text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+        />
+        <div class="flex flex-wrap gap-2" id="filter-tags">
+          {allCharacters.map((char) => (
+            <button
+              data-filter-character={char}
+              class="filter-btn px-3 py-1 text-xs rounded-full border border-border text-text-muted hover:border-accent hover:text-accent transition-colors"
+            >
+              {char}
+            </button>
+          ))}
+          {allWorlds.length > 1 && allWorlds.map((world) => (
+            <button
+              data-filter-world={world}
+              class="filter-btn px-3 py-1 text-xs rounded-full border border-border text-text-muted hover:border-accent hover:text-accent transition-colors"
+            >
+              {world}
+            </button>
+          ))}
+          {allTags.map((tag) => (
+            <button
+              data-filter-tag={tag}
+              class="filter-btn px-3 py-1 text-xs rounded-full border border-border text-text-muted hover:border-accent hover:text-accent transition-colors"
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Scene list -->
+      <div class="space-y-3" id="scene-list">
+        {allScenes.map((scene) => (
+          <a
+            href={`${base}/writing/${scene.slug}/`}
+            class="scene-card group block p-4 rounded-lg border border-border hover:border-accent transition-colors"
+            data-title={scene.data.title.toLowerCase()}
+            data-tags={JSON.stringify(scene.data.tags)}
+            data-characters={JSON.stringify(scene.data.characters ?? [])}
+            data-world={scene.data.world ?? ''}
+            data-description={(scene.data.description ?? '').toLowerCase()}
+          >
+            <h3 class="font-semibold group-hover:text-accent transition-colors">{scene.data.title}</h3>
+            {scene.data.description && (
+              <p class="mt-1 text-sm text-text-secondary">{scene.data.description}</p>
+            )}
+            <div class="mt-2 flex flex-wrap gap-2">
+              {scene.data.world && (
+                <span class="text-xs px-2 py-0.5 rounded-full bg-bg-accent text-accent">{scene.data.world}</span>
+              )}
+              {(scene.data.characters ?? []).map((char: string) => (
+                <span class="text-xs px-2 py-0.5 rounded-full bg-tag-bg text-tag-text">{char}</span>
+              ))}
+              {scene.data.tags.map((tag: string) => (
+                <span class="text-xs px-2 py-0.5 rounded-full bg-bg-muted text-text-muted">{tag}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- No results message -->
+      <p id="no-results" class="hidden text-text-muted py-4">No scenes match your search.</p>
+    </div>
+  )}
+</BaseLayout>
+
+<script>
+  const searchInput = document.getElementById('scene-search') as HTMLInputElement;
+  let activeFilters: Set<string> = new Set();
+
+  function applyFilters() {
+    const query = searchInput?.value.toLowerCase() ?? '';
+    const cards = document.querySelectorAll('.scene-card');
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const el = card as HTMLElement;
+      const title = el.dataset.title ?? '';
+      const description = el.dataset.description ?? '';
+      const tags: string[] = JSON.parse(el.dataset.tags ?? '[]');
+      const characters: string[] = JSON.parse(el.dataset.characters ?? '[]');
+      const world = el.dataset.world ?? '';
+
+      const searchable = [title, description, world, ...tags, ...characters].map((s) => s.toLowerCase());
+
+      const matchesSearch = !query || searchable.some((s) => s.includes(query));
+      const matchesFilters = activeFilters.size === 0 || [...activeFilters].every((f) =>
+        [...tags, ...characters, world].map((s) => s.toLowerCase()).includes(f.toLowerCase())
+      );
+
+      const visible = matchesSearch && matchesFilters;
+      el.classList.toggle('hidden', !visible);
+      if (visible) visibleCount++;
+    });
+
+    noResults?.classList.toggle('hidden', visibleCount > 0);
+  }
+
+  const noResults = document.getElementById('no-results');
+  searchInput?.addEventListener('input', applyFilters);
+
+  document.querySelectorAll('.filter-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const el = btn as HTMLElement;
+      const value = el.dataset.filterTag ?? el.dataset.filterCharacter ?? el.dataset.filterWorld ?? '';
+      if (activeFilters.has(value)) {
+        activeFilters.delete(value);
+        el.classList.remove('bg-accent', 'text-bg', 'border-accent');
+      } else {
+        activeFilters.add(value);
+        el.classList.add('bg-accent', 'text-bg', 'border-accent');
+      }
+      applyFilters();
+    });
+  });
+</script>

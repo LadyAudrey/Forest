@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bgCore" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#1a1a2e" />
+      <stop offset="40%" stop-color="#0d0d1a" />
+      <stop offset="100%" stop-color="#050510" />
+    </radialGradient>
+    <radialGradient id="nebulaIndigo" cx="45%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#360568" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#360568" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nebulaGreen" cx="60%" cy="55%" r="45%">
+      <stop offset="0%" stop-color="#013C1A" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#013C1A" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nebulaBlush" cx="50%" cy="42%" r="30%">
+      <stop offset="0%" stop-color="#FAB2EA" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#FAB2EA" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="auraOuter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EFDD8D" stop-opacity="0.2" />
+      <stop offset="40%" stop-color="#FAB2EA" stop-opacity="0.08" />
+      <stop offset="70%" stop-color="#360568" stop-opacity="0.04" />
+      <stop offset="100%" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="auraInner" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EFDD8D" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#F4FDAF" stop-opacity="0.1" />
+      <stop offset="100%" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="heartGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FAB2EA" stop-opacity="0.5" />
+      <stop offset="60%" stop-color="#FAB2EA" stop-opacity="0.1" />
+      <stop offset="100%" stop-opacity="0" />
+    </radialGradient>
+    <filter id="bigGlow"><feGaussianBlur stdDeviation="20" /></filter>
+    <filter id="medGlow"><feGaussianBlur stdDeviation="10" /></filter>
+    <filter id="smallGlow"><feGaussianBlur stdDeviation="5" /></filter>
+    <filter id="tinyGlow"><feGaussianBlur stdDeviation="2.5" /></filter>
+    <filter id="figureGlow"><feGaussianBlur stdDeviation="4" /></filter>
+    <filter id="nebulaTex" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="5" seed="42" result="noise" />
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray" />
+      <feComponentTransfer in="gray" result="shaped"><feFuncA type="table" tableValues="0 0 0.1 0.3 0.5 0.3 0.1 0" /></feComponentTransfer>
+      <feComposite operator="in" in="SourceGraphic" in2="shaped" />
+    </filter>
+    <filter id="nebulaTex2" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" seed="88" result="noise" />
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray" />
+      <feComponentTransfer in="gray" result="shaped"><feFuncA type="table" tableValues="0 0.05 0.2 0.4 0.2 0.05 0" /></feComponentTransfer>
+      <feComposite operator="in" in="SourceGraphic" in2="shaped" />
+    </filter>
+    <filter id="displace" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="3" seed="7" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="35" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgCore)" />
+  <rect width="1200" height="630" fill="url(#nebulaIndigo)" />
+  <rect width="1200" height="630" fill="url(#nebulaGreen)" />
+  <rect width="1200" height="630" fill="url(#nebulaBlush)" />
+  
+  <!-- Nebula clouds -->
+  <ellipse cx="500" cy="300" rx="500" ry="300" fill="#360568" opacity="0.22" filter="url(#nebulaTex)" />
+  <ellipse cx="700" cy="320" rx="450" ry="280" fill="#013C1A" opacity="0.18" filter="url(#nebulaTex2)" />
+  <ellipse cx="600" cy="290" rx="350" ry="200" fill="#FAB2EA" opacity="0.06" filter="url(#nebulaTex)" />
+  
+  <!-- Energy streams radiating from figure -->
+  <g filter="url(#displace)" opacity="0.45">
+    <path d="M600,280 Q580,180 500,30" stroke="#EFDD8D" stroke-width="2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,280 Q620,160 680,0" stroke="#FAB2EA" stroke-width="1.8" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,280 Q560,150 420,10" stroke="#F4FDAF" stroke-width="1.5" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,280 Q640,140 760,0" stroke="#EFDD8D" stroke-width="1.5" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,280 Q550,190 380,50" stroke="#FAB2EA" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,280 Q660,170 820,20" stroke="#F4FDAF" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,300 Q450,270 100,220" stroke="#EFDD8D" stroke-width="2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,300 Q750,270 1100,220" stroke="#FAB2EA" stroke-width="2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,300 Q430,310 50,350" stroke="#F4FDAF" stroke-width="1.5" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,300 Q770,310 1150,350" stroke="#EFDD8D" stroke-width="1.5" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,290 Q400,240 80,150" stroke="#FAB2EA" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,290 Q800,240 1120,150" stroke="#F4FDAF" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,350 Q580,450 520,630" stroke="#EFDD8D" stroke-width="1.8" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,350 Q620,460 700,630" stroke="#FAB2EA" stroke-width="1.8" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,350 Q550,480 400,630" stroke="#F4FDAF" stroke-width="1.5" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,350 Q650,480 800,630" stroke="#EFDD8D" stroke-width="1.5" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,360 Q500,470 280,620" stroke="#FAB2EA" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,360 Q700,470 920,620" stroke="#F4FDAF" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,280 Q480,200 200,80" stroke="#EFDD8D" stroke-width="1.5" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,280 Q720,200 1000,80" stroke="#FAB2EA" stroke-width="1.5" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,350 Q460,430 150,560" stroke="#F4FDAF" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,350 Q740,430 1050,560" stroke="#EFDD8D" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+  </g>
+  
+  <!-- Secondary streams -->
+  <g filter="url(#displace)" opacity="0.25">
+    <path d="M600,280 Q540,120 450,0" stroke="#EFDD8D" stroke-width="0.8" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,280 Q660,120 750,0" stroke="#FAB2EA" stroke-width="0.8" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,300 Q380,280 0,260" stroke="#F4FDAF" stroke-width="0.8" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,300 Q820,280 1200,260" stroke="#EFDD8D" stroke-width="0.8" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,350 Q560,500 480,630" stroke="#FAB2EA" stroke-width="0.8" fill="none" filter="url(#tinyGlow)" />
+    <path d="M600,350 Q640,500 720,630" stroke="#F4FDAF" stroke-width="0.8" fill="none" filter="url(#tinyGlow)" />
+  </g>
+  
+  <!-- Energy knots -->
+  <g filter="url(#smallGlow)">
+    <circle cx="480" cy="180" r="4" fill="#EFDD8D" opacity="0.4" />
+    <circle cx="720" cy="170" r="3.5" fill="#FAB2EA" opacity="0.35" />
+    <circle cx="400" cy="250" r="3" fill="#F4FDAF" opacity="0.3" />
+    <circle cx="800" cy="250" r="3.5" fill="#EFDD8D" opacity="0.35" />
+    <circle cx="520" cy="440" r="3" fill="#FAB2EA" opacity="0.3" />
+    <circle cx="680" cy="450" r="3.5" fill="#F4FDAF" opacity="0.3" />
+    <circle cx="350" cy="350" r="3" fill="#EFDD8D" opacity="0.25" />
+    <circle cx="850" cy="340" r="3" fill="#FAB2EA" opacity="0.25" />
+  </g>
+  
+  <!-- Aura layers -->
+  <ellipse cx="600" cy="310" rx="180" ry="200" fill="url(#auraOuter)" filter="url(#bigGlow)" />
+  <ellipse cx="600" cy="310" rx="110" ry="140" fill="url(#auraInner)" filter="url(#medGlow)" />
+  
+  <!-- FLOATING FIGURE - relaxed, surrendered, arms out, head tilted slightly back -->
+  <g transform="translate(600, 295)" opacity="0.85">
+    <!-- Glow silhouette layer -->
+    <g filter="url(#figureGlow)" opacity="0.6">
+      <ellipse cx="0" cy="-72" rx="14" ry="16" fill="#EFDD8D" />
+      <rect x="-4" y="-58" width="8" height="12" rx="3" fill="#EFDD8D" />
+      <ellipse cx="0" cy="-28" rx="18" ry="28" fill="#EFDD8D" />
+      <path d="M-18,-42 Q-40,-35 -62,-22 Q-75,-16 -82,-8" stroke="#EFDD8D" stroke-width="7" fill="none" stroke-linecap="round" />
+      <path d="M18,-42 Q40,-35 62,-22 Q75,-16 82,-8" stroke="#EFDD8D" stroke-width="7" fill="none" stroke-linecap="round" />
+      <circle cx="-85" cy="-5" r="5" fill="#EFDD8D" />
+      <circle cx="85" cy="-5" r="5" fill="#EFDD8D" />
+      <path d="M-8,0 Q-12,40 -18,75 Q-20,90 -16,100" stroke="#EFDD8D" stroke-width="7" fill="none" stroke-linecap="round" />
+      <path d="M8,0 Q12,40 18,75 Q20,90 16,100" stroke="#EFDD8D" stroke-width="7" fill="none" stroke-linecap="round" />
+      <ellipse cx="-16" cy="103" rx="5" ry="3" fill="#EFDD8D" />
+      <ellipse cx="16" cy="103" rx="5" ry="3" fill="#EFDD8D" />
+    </g>
+    
+    <!-- Main figure -->
+    <g>
+      <ellipse cx="0" cy="-72" rx="12" ry="14" fill="#F4FDAF" opacity="0.7" />
+      <rect x="-3.5" y="-59" width="7" height="11" rx="2.5" fill="#F4FDAF" opacity="0.65" />
+      <ellipse cx="0" cy="-28" rx="16" ry="26" fill="#F4FDAF" opacity="0.6" />
+      <path d="M-16,-40 Q-38,-33 -58,-20 Q-72,-14 -78,-6" stroke="#F4FDAF" stroke-width="5.5" fill="none" stroke-linecap="round" opacity="0.6" />
+      <path d="M16,-40 Q38,-33 58,-20 Q72,-14 78,-6" stroke="#F4FDAF" stroke-width="5.5" fill="none" stroke-linecap="round" opacity="0.6" />
+      <circle cx="-81" cy="-3" r="4" fill="#F4FDAF" opacity="0.6" />
+      <circle cx="81" cy="-3" r="4" fill="#F4FDAF" opacity="0.6" />
+      <g stroke="#F4FDAF" stroke-width="1.5" stroke-linecap="round" opacity="0.4">
+        <line x1="-84" y1="-6" x2="-89" y2="-10" />
+        <line x1="-85" y1="-3" x2="-91" y2="-4" />
+        <line x1="-84" y1="0" x2="-89" y2="3" />
+        <line x1="84" y1="-6" x2="89" y2="-10" />
+        <line x1="85" y1="-3" x2="91" y2="-4" />
+        <line x1="84" y1="0" x2="89" y2="3" />
+      </g>
+      <path d="M-7,0 Q-10,38 -16,72 Q-18,86 -14,96" stroke="#F4FDAF" stroke-width="5.5" fill="none" stroke-linecap="round" opacity="0.55" />
+      <path d="M7,0 Q10,38 16,72 Q18,86 14,96" stroke="#F4FDAF" stroke-width="5.5" fill="none" stroke-linecap="round" opacity="0.55" />
+      <ellipse cx="-14" cy="99" rx="4.5" ry="2.5" fill="#F4FDAF" opacity="0.5" />
+      <ellipse cx="14" cy="99" rx="4.5" ry="2.5" fill="#F4FDAF" opacity="0.5" />
+    </g>
+    
+    <!-- Heart glow -->
+    <circle cx="0" cy="-35" r="20" fill="url(#heartGlow)" filter="url(#smallGlow)" />
+    <circle cx="0" cy="-35" r="6" fill="#FAB2EA" opacity="0.35" filter="url(#tinyGlow)" />
+    <circle cx="0" cy="-35" r="2" fill="#FAB2EA" opacity="0.5" />
+    
+    <!-- Crown glow -->
+    <circle cx="0" cy="-85" r="12" fill="#EFDD8D" opacity="0.15" filter="url(#smallGlow)" />
+    <circle cx="0" cy="-85" r="4" fill="#EFDD8D" opacity="0.3" filter="url(#tinyGlow)" />
+    
+    <!-- Energy line through center -->
+    <line x1="0" y1="-85" x2="0" y2="50" stroke="#EFDD8D" stroke-width="0.5" opacity="0.15" filter="url(#tinyGlow)" />
+  </g>
+  
+  <!-- Particles near figure -->
+  <g filter="url(#tinyGlow)">
+    <circle cx="540" cy="240" r="1.5" fill="#EFDD8D" opacity="0.5" />
+    <circle cx="660" cy="235" r="1.2" fill="#FAB2EA" opacity="0.45" />
+    <circle cx="520" cy="290" r="1.8" fill="#F4FDAF" opacity="0.4" />
+    <circle cx="680" cy="285" r="1.5" fill="#EFDD8D" opacity="0.45" />
+    <circle cx="555" cy="350" r="1.2" fill="#FAB2EA" opacity="0.4" />
+    <circle cx="645" cy="355" r="1.5" fill="#F4FDAF" opacity="0.4" />
+    <circle cx="530" cy="200" r="1" fill="#EFDD8D" opacity="0.35" />
+    <circle cx="670" cy="195" r="1.2" fill="#FAB2EA" opacity="0.35" />
+    <circle cx="510" cy="330" r="1" fill="#F4FDAF" opacity="0.3" />
+    <circle cx="690" cy="325" r="1.2" fill="#EFDD8D" opacity="0.35" />
+    <circle cx="565" cy="410" r="1" fill="#FAB2EA" opacity="0.3" />
+    <circle cx="635" cy="415" r="1.2" fill="#EFDD8D" opacity="0.3" />
+  </g>
+  
+  <!-- Star field -->
+  <g>
+    <circle cx="80" cy="45" r="1.8" fill="#EFDD8D" opacity="0.7" />
+    <circle cx="1120" cy="70" r="2" fill="#FAB2EA" opacity="0.65" />
+    <circle cx="180" cy="560" r="1.5" fill="#F4FDAF" opacity="0.6" />
+    <circle cx="1050" cy="540" r="1.8" fill="#EFDD8D" opacity="0.6" />
+    <circle cx="40" cy="310" r="1.5" fill="#FAB2EA" opacity="0.55" />
+    <circle cx="1170" cy="320" r="1.8" fill="#EFDD8D" opacity="0.6" />
+    <circle cx="160" cy="160" r="2" fill="#F4FDAF" opacity="0.55" />
+    <circle cx="1020" cy="40" r="1.5" fill="#FAB2EA" opacity="0.6" />
+    <circle cx="280" cy="70" r="1.2" fill="#EFDD8D" opacity="0.5" />
+    <circle cx="920" cy="570" r="1.2" fill="#FAB2EA" opacity="0.5" />
+    <circle cx="70" cy="460" r="1" fill="#F4FDAF" opacity="0.45" />
+    <circle cx="1140" cy="170" r="1.2" fill="#EFDD8D" opacity="0.5" />
+    <circle cx="350" cy="30" r="1" fill="#FAB2EA" opacity="0.45" />
+    <circle cx="860" cy="20" r="1.2" fill="#F4FDAF" opacity="0.45" />
+    <circle cx="1090" cy="610" r="1" fill="#EFDD8D" opacity="0.4" />
+    <circle cx="230" cy="490" r="1.2" fill="#FAB2EA" opacity="0.45" />
+    <circle cx="140" cy="380" r="0.8" fill="#EFDD8D" opacity="0.35" />
+    <circle cx="980" cy="470" r="0.8" fill="#FAB2EA" opacity="0.3" />
+    <circle cx="1030" cy="230" r="0.8" fill="#F4FDAF" opacity="0.35" />
+    <circle cx="310" cy="520" r="0.7" fill="#EFDD8D" opacity="0.3" />
+    <circle cx="50" cy="130" r="0.8" fill="#FAB2EA" opacity="0.3" />
+    <circle cx="1160" cy="480" r="0.7" fill="#EFDD8D" opacity="0.35" />
+    <circle cx="420" cy="10" r="0.8" fill="#F4FDAF" opacity="0.3" />
+    <circle cx="780" cy="610" r="0.7" fill="#FAB2EA" opacity="0.3" />
+    <circle cx="900" cy="100" r="0.6" fill="#EFDD8D" opacity="0.25" />
+    <circle cx="130" cy="600" r="0.7" fill="#F4FDAF" opacity="0.25" />
+    <circle cx="450" cy="580" r="0.6" fill="#FAB2EA" opacity="0.25" />
+    <circle cx="750" cy="30" r="0.7" fill="#EFDD8D" opacity="0.3" />
+  </g>
+  
+  <!-- Star flares -->
+  <g filter="url(#tinyGlow)">
+    <circle cx="80" cy="45" r="3.5" fill="#EFDD8D" opacity="0.25" />
+    <circle cx="1120" cy="70" r="4" fill="#FAB2EA" opacity="0.2" />
+    <circle cx="1170" cy="320" r="3" fill="#EFDD8D" opacity="0.2" />
+    <circle cx="160" cy="160" r="3.5" fill="#F4FDAF" opacity="0.18" />
+  </g>
+</svg>

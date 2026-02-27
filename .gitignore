@@ -1,0 +1,33 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# environment variables
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+!.vscode/extensions.json
+.idea/
+
+# Claude local settings (may contain machine-specific config)
+.claude/settings.local.json
+
+# ──────────────────────────────────────────────
+# Private content — stays on your machine only
+# ──────────────────────────────────────────────
+# Anything in src/private/ is git-ignored.
+# Use this for content you don't want on GitHub at all.
+# For content you want backed up on GitHub but NOT published
+# to your site, use `published: false` in frontmatter instead.
+src/private/

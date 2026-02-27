@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background gradient: deep indigo to forest green -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#360568" />
+      <stop offset="50%" stop-color="#1a3a2a" />
+      <stop offset="100%" stop-color="#013C1A" />
+    </linearGradient>
+    
+    <!-- Soft glow: blush pop -->
+    <radialGradient id="glowBlush" cx="70%" cy="40%" r="35%">
+      <stop offset="0%" stop-color="#FAB2EA" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FAB2EA" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Soft glow: light gold -->
+    <radialGradient id="glowGold" cx="30%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#EFDD8D" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#EFDD8D" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Soft glow: lime cream -->
+    <radialGradient id="glowCream" cx="50%" cy="30%" r="30%">
+      <stop offset="0%" stop-color="#F4FDAF" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#F4FDAF" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Gentle top glow -->
+    <radialGradient id="glowTop" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#EFDD8D" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#EFDD8D" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filter for soft dreamy blur -->
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="3" />
+    </filter>
+    <filter id="gentleBlur">
+      <feGaussianBlur stdDeviation="1.5" />
+    </filter>
+    
+    <!-- Mandala-like breathing circle pattern -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  
+  <!-- Ethereal glow layers -->
+  <rect width="1200" height="630" fill="url(#glowBlush)" />
+  <rect width="1200" height="630" fill="url(#glowGold)" />
+  <rect width="1200" height="630" fill="url(#glowCream)" />
+  <rect width="1200" height="630" fill="url(#glowTop)" />
+  
+  <!-- Floating soft orbs / particles -->
+  <!-- Large dreamy orbs -->
+  <circle cx="180" cy="150" r="80" fill="#FAB2EA" opacity="0.07" filter="url(#softBlur)" />
+  <circle cx="900" cy="200" r="120" fill="#EFDD8D" opacity="0.08" filter="url(#softBlur)" />
+  <circle cx="600" cy="480" r="100" fill="#F4FDAF" opacity="0.06" filter="url(#softBlur)" />
+  <circle cx="1050" cy="500" r="70" fill="#FAB2EA" opacity="0.06" filter="url(#softBlur)" />
+  <circle cx="350" cy="400" r="90" fill="#EFDD8D" opacity="0.05" filter="url(#softBlur)" />
+  
+  <!-- Central mandala-like breathing circle -->
+  <g transform="translate(600, 290)" filter="url(#glow)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#EFDD8D" stroke-width="0.5" opacity="0.2" />
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#FAB2EA" stroke-width="0.3" opacity="0.15" />
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#F4FDAF" stroke-width="0.5" opacity="0.15" />
+    
+    <!-- Middle rings -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#EFDD8D" stroke-width="0.7" opacity="0.25" />
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#FAB2EA" stroke-width="0.4" opacity="0.2" />
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#F4FDAF" stroke-width="0.6" opacity="0.2" />
+    
+    <!-- Inner rings -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#EFDD8D" stroke-width="0.8" opacity="0.3" />
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#FAB2EA" stroke-width="0.5" opacity="0.25" />
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#EFDD8D" stroke-width="1" opacity="0.35" />
+    
+    <!-- Core glow -->
+    <circle cx="0" cy="0" r="12" fill="#EFDD8D" opacity="0.15" />
+    <circle cx="0" cy="0" r="6" fill="#EFDD8D" opacity="0.25" />
+    
+    <!-- Petal shapes radiating outward -->
+    <g opacity="0.12">
+      <ellipse cx="0" cy="-90" rx="12" ry="35" fill="#FAB2EA" transform="rotate(0)" />
+      <ellipse cx="0" cy="-90" rx="12" ry="35" fill="#EFDD8D" transform="rotate(45)" />
+      <ellipse cx="0" cy="-90" rx="12" ry="35" fill="#F4FDAF" transform="rotate(90)" />
+      <ellipse cx="0" cy="-90" rx="12" ry="35" fill="#FAB2EA" transform="rotate(135)" />
+      <ellipse cx="0" cy="-90" rx="12" ry="35" fill="#EFDD8D" transform="rotate(180)" />
+      <ellipse cx="0" cy="-90" rx="12" ry="35" fill="#F4FDAF" transform="rotate(225)" />
+      <ellipse cx="0" cy="-90" rx="12" ry="35" fill="#FAB2EA" transform="rotate(270)" />
+      <ellipse cx="0" cy="-90" rx="12" ry="35" fill="#EFDD8D" transform="rotate(315)" />
+    </g>
+    
+    <!-- Inner petal layer -->
+    <g opacity="0.1">
+      <ellipse cx="0" cy="-55" rx="8" ry="22" fill="#EFDD8D" transform="rotate(22.5)" />
+      <ellipse cx="0" cy="-55" rx="8" ry="22" fill="#FAB2EA" transform="rotate(67.5)" />
+      <ellipse cx="0" cy="-55" rx="8" ry="22" fill="#F4FDAF" transform="rotate(112.5)" />
+      <ellipse cx="0" cy="-55" rx="8" ry="22" fill="#EFDD8D" transform="rotate(157.5)" />
+      <ellipse cx="0" cy="-55" rx="8" ry="22" fill="#FAB2EA" transform="rotate(202.5)" />
+      <ellipse cx="0" cy="-55" rx="8" ry="22" fill="#F4FDAF" transform="rotate(247.5)" />
+      <ellipse cx="0" cy="-55" rx="8" ry="22" fill="#EFDD8D" transform="rotate(292.5)" />
+      <ellipse cx="0" cy="-55" rx="8" ry="22" fill="#FAB2EA" transform="rotate(337.5)" />
+    </g>
+    
+    <!-- Subtle radial lines -->
+    <g stroke="#EFDD8D" stroke-width="0.3" opacity="0.1">
+      <line x1="0" y1="-145" x2="0" y2="145" />
+      <line x1="-145" y1="0" x2="145" y2="0" />
+      <line x1="-102" y1="-102" x2="102" y2="102" />
+      <line x1="102" y1="-102" x2="-102" y2="102" />
+    </g>
+  </g>
+  
+  <!-- Small floating particles / stars -->
+  <circle cx="120" cy="80" r="2" fill="#EFDD8D" opacity="0.4" />
+  <circle cx="250" cy="520" r="1.5" fill="#FAB2EA" opacity="0.35" />
+  <circle cx="400" cy="100" r="1.8" fill="#F4FDAF" opacity="0.3" />
+  <circle cx="800" cy="90" r="2.2" fill="#EFDD8D" opacity="0.35" />
+  <circle cx="1000" cy="130" r="1.5" fill="#FAB2EA" opacity="0.4" />
+  <circle cx="1100" cy="400" r="2" fill="#F4FDAF" opacity="0.3" />
+  <circle cx="150" cy="350" r="1.8" fill="#EFDD8D" opacity="0.3" />
+  <circle cx="950" cy="550" r="2" fill="#EFDD8D" opacity="0.25" />
+  <circle cx="500" cy="70" r="1.5" fill="#FAB2EA" opacity="0.3" />
+  <circle cx="700" cy="560" r="2" fill="#F4FDAF" opacity="0.25" />
+  <circle cx="300" cy="250" r="1.2" fill="#EFDD8D" opacity="0.35" />
+  <circle cx="1050" cy="280" r="1.8" fill="#FAB2EA" opacity="0.3" />
+  
+  <!-- Title text -->
+  <text x="600" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="normal" fill="#EFDD8D" opacity="0.9" letter-spacing="3">
+    Building a Softer Future
+  </text>
+  
+  <!-- Subtle divider line -->
+  <line x1="480" y1="290" x2="720" y2="290" stroke="#EFDD8D" stroke-width="0.5" opacity="0.3" />
+  
+  <!-- Subtitle -->
+  <text x="600" y="325" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#F4FDAF" opacity="0.6" letter-spacing="5" font-style="italic">
+    slow down · regulate · reconnect
+  </text>
+</svg>
