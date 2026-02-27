@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://LadyAudrey.github.io',
-  base: '/yours-truly',
+  base: '/yours-truly-main',
   integrations: [tailwind()],
   markdown: {
     shikiConfig: {

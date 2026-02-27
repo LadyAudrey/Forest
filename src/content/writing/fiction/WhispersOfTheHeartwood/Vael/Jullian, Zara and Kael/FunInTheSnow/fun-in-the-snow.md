@@ -9,7 +9,7 @@ world: "Vael"
 characters: ["Julian", "Zara", "Kael"]
 published: true
 featured: true
-cover: "/yours-truly/art/whispers/fun-in-the-snow-buns.jpg"
+cover: "/yours-truly-main/art/whispers/fun-in-the-snow-buns.jpg"
 ai_assisted: true
 ai_notes: "Claude wrote title, description, tags, and frontmatter; scene is Audrey's"
 ---
@@ -54,4 +54,4 @@ The trees close in around them as they leave the academy grounds behind. Here, t
 
 "There!" Zara points up through the branches. Nestled in the crook of two thick limbs is their fort—or what will be, once they finish it. Right now it's mostly salvaged planks and a half-rotted tarp, but it's theirs. Grinning, Julian brings the sled to a stop at the root of the tree. Hopping off the sled, he flashes a grin to his friends and jumps to grab the lowest branch.
 
-![Julian, Zara, and Kael sledding toward their fort](/yours-truly/art/whispers/fun-in-the-snow.jpg)
+![Julian, Zara, and Kael sledding toward their fort](/yours-truly-main/art/whispers/fun-in-the-snow.jpg)

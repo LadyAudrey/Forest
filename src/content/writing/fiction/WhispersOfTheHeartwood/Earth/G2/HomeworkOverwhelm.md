@@ -9,7 +9,7 @@ world: "Earth"
 characters: ["Adeline"]
 published: true
 featured: true
-cover: "/yours-truly/art/whispers/homework-overwhelm.jpg"
+cover: "/yours-truly-main/art/whispers/homework-overwhelm.jpg"
 ai_assisted: true
 ai_notes: "Claude wrote title, description, tags, and frontmatter; scene is Audrey's"
 ---

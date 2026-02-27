@@ -5,7 +5,7 @@ date: 2026-01-07
 tags: ["mandala", "floral", "layered"]
 published: true
 medium: "Digital — kaleidoscopic composition"
-image: "/yours-truly/art/mandalas/luminous-bloom.png"
+image: "/yours-truly-main/art/mandalas/luminous-bloom.png"
 ai_assisted: true
 ai_notes: "Claude wrote title, description, and body text for the art listing"
 ---

@@ -5,7 +5,7 @@ date: 2026-02-26
 tags: ["portrait", "sun", "golden", "awakening", "radiant", "botanical"]
 published: true
 medium: "AI-generated digital art"
-image: "/yours-truly/art/portraits/solar-awakening.jpg"
+image: "/yours-truly-main/art/portraits/solar-awakening.jpg"
 ai_assisted: true
 ai_generated: true
 ai_notes: "AI-generated image. Claude wrote title, description, tags, and body text."
