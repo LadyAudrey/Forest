@@ -1,50 +1,65 @@
 import { defineCollection, z } from 'astro:content';
 
-const baseSchema = z.object({
-  title: z.string(),
-  description: z.string().optional(),
-  date: z.coerce.date(),
-  updated: z.coerce.date().optional(),
-  tags: z.array(z.string()).default([]),
-  published: z.boolean().default(true),
-  featured: z.boolean().default(false),
-  cover: z.string().optional(),
-  ai_assisted: z.boolean().optional(),
-  ai_notes: z.string().optional(),
-});
-
-const blog = defineCollection({
-  type: 'content',
-  schema: baseSchema,
-});
-
-const projects = defineCollection({
-  type: 'content',
-  schema: baseSchema.extend({
-    status: z.enum(['idea', 'in-progress', 'complete', 'ongoing']).default('in-progress'),
-    url: z.string().url().optional(),
-  }),
-});
-
-const writing = defineCollection({
-  type: 'content',
-  schema: baseSchema.extend({
-    genre: z.enum(['fiction', 'nonfiction', 'poetry']).optional(),
-    series: z.string().optional(),
-    order: z.number().optional(),
-    generation: z.string().optional(),
-    world: z.string().optional(),
-    characters: z.array(z.string()).default([]),
-  }),
-});
-
-const art = defineCollection({
-  type: 'content',
-  schema: baseSchema.extend({
-    medium: z.string().optional(),
+const artCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
     image: z.string().optional(),
-    ai_generated: z.boolean().default(false),
+    published: z.boolean().default(true),
+    date: z.string().optional(),
+    tags: z.array(z.string()).optional(),
   }),
 });
 
-export const collections = { blog, projects, writing, art };
+const blogCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    heroImage: z.string().optional(),
+  }),
+});
+
+const projectsCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    image: z.string().optional(),
+    url: z.string().optional(),
+    github: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    published: z.boolean().default(true),
+  }),
+});
+
+const writingCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    pubDate: z.coerce.date().optional(),
+    published: z.boolean().default(true),
+    genre: z.enum(['fiction', 'nonfiction', 'poetry']).optional(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
+const photographyCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    image: z.string(),
+    published: z.boolean().default(true),
+    date: z.string().optional(),
+    location: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
+export const collections = {
+  art: artCollection,
+  blog: blogCollection,
+  projects: projectsCollection,
+  writing: writingCollection,
+  photography: photographyCollection,
+};
