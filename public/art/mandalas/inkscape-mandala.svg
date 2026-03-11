@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="800"
+   height="800"
+   viewBox="0 0 800 800"
+   version="1.1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient
+       id="linearGradient81">
+      <stop
+         style="stop-color:#03776e;stop-opacity:1;"
+         offset="0"
+         id="stop80" />
+      <stop
+         style="stop-color:#012502;stop-opacity:0;"
+         offset="1"
+         id="stop81" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient51">
+      <stop
+         style="stop-color:#98fd9a;stop-opacity:0.51759326;"
+         offset="0"
+         id="stop50">
+        <animate attributeName="stop-color"
+           values="#98fd9a;#7de880;#a8ffab;#98fd9a"
+           dur="22s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.52;0.42;0.58;0.52"
+           dur="18s" repeatCount="indefinite" />
+      </stop>
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.41455784;"
+         offset="1"
+         id="stop51">
+        <animate attributeName="stop-opacity"
+           values="0.41;0.34;0.48;0.41"
+           dur="20s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    <linearGradient
+       id="linearGradient38">
+      <!-- CENTER: warm amber glow (pulled back from cream to stay mid-tone) -->
+      <stop
+         style="stop-color:#cc9326;stop-opacity:0.55;"
+         offset="0"
+         id="stop-center">
+        <animate attributeName="stop-color"
+           values="#cc9326;#a57a1a;#ffcf6b;#cc9326"
+           dur="50s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.55;0.42;0.62;0.55"
+           dur="40s" repeatCount="indefinite" />
+      </stop>
+      <!-- Blush-200 pink heart (toned down) -->
+      <stop
+         style="stop-color:#be1d9c;stop-opacity:0.50;"
+         offset="0.12"
+         id="stop-blush-heart">
+        <animate attributeName="stop-color"
+           values="#be1d9c;#f687dd;#961579;#be1d9c"
+           dur="44s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.50;0.38;0.58;0.50"
+           dur="36s" repeatCount="indefinite" />
+        <animate attributeName="offset"
+           values="0.12;0.09;0.16;0.12"
+           dur="42s" repeatCount="indefinite" />
+      </stop>
+      <!-- Neon amber warmth (deepened) -->
+      <stop
+         style="stop-color:#cc9326;stop-opacity:0.45;"
+         offset="0.24"
+         id="stop-amber">
+        <animate attributeName="stop-color"
+           values="#cc9326;#a57a1a;#EFDD8D;#7c6212;#cc9326"
+           dur="48s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.45;0.32;0.52;0.38;0.45"
+           dur="38s" repeatCount="indefinite" />
+        <animate attributeName="offset"
+           values="0.24;0.20;0.28;0.24"
+           dur="44s" repeatCount="indefinite" />
+      </stop>
+      <!-- Gold — deepened -->
+      <stop
+         style="stop-color:#c4a01c;stop-opacity:0.45;"
+         offset="0.34"
+         id="stop-gold-light">
+        <animate attributeName="stop-color"
+           values="#c4a01c;#a57a1a;#EFDD8D;#c4a01c"
+           dur="52s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.45;0.32;0.52;0.45"
+           dur="42s" repeatCount="indefinite" />
+        <animate attributeName="offset"
+           values="0.34;0.30;0.38;0.34"
+           dur="46s" repeatCount="indefinite" />
+      </stop>
+      <!-- Blush-300 pink wash -->
+      <stop
+         style="stop-color:#f687dd;stop-opacity:0.55;"
+         offset="0.44"
+         id="stop-blush-center">
+        <animate attributeName="stop-color"
+           values="#f687dd;#FAB2EA;#e035bb;#f687dd"
+           dur="42s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.55;0.40;0.65;0.55"
+           dur="34s" repeatCount="indefinite" />
+        <animate attributeName="offset"
+           values="0.44;0.40;0.48;0.44"
+           dur="38s" repeatCount="indefinite" />
+      </stop>
+      <!-- Lime-500 spring green -->
+      <stop
+         style="stop-color:#a5c415;stop-opacity:0.45;"
+         offset="0.54"
+         id="stop-lime">
+        <animate attributeName="stop-color"
+           values="#a5c415;#c4e028;#F4FDAF;#62770c;#a5c415"
+           dur="46s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.45;0.30;0.55;0.38;0.45"
+           dur="38s" repeatCount="indefinite" />
+        <animate attributeName="offset"
+           values="0.54;0.50;0.58;0.54"
+           dur="42s" repeatCount="indefinite" />
+      </stop>
+      <!-- Blush-600 magenta -->
+      <stop
+         style="stop-color:#be1d9c;stop-opacity:0.50;"
+         offset="0.64"
+         id="stop-blush1">
+        <animate attributeName="stop-color"
+           values="#be1d9c;#961579;#e035bb;#be1d9c"
+           dur="48s" repeatCount="indefinite" />
+        <animate attributeName="offset"
+           values="0.64;0.60;0.68;0.64"
+           dur="40s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.50;0.38;0.60;0.50"
+           dur="36s" repeatCount="indefinite" />
+      </stop>
+      <!-- Indigo-700 -->
+      <stop
+         style="stop-color:#4c0a7d;stop-opacity:0.70;"
+         offset="0.74"
+         id="stop-indigo1">
+        <animate attributeName="stop-color"
+           values="#4c0a7d;#360568;#611099;#4c0a7d"
+           dur="54s" repeatCount="indefinite" />
+        <animate attributeName="offset"
+           values="0.74;0.70;0.78;0.74"
+           dur="42s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.70;0.55;0.80;0.70"
+           dur="38s" repeatCount="indefinite" />
+      </stop>
+      <!-- Forest-900 deep green -->
+      <stop
+         style="stop-color:#013C1A;stop-opacity:0.90;"
+         offset="0.84"
+         id="stop-forest-mid">
+        <animate attributeName="stop-color"
+           values="#013C1A;#044922;#00260f;#013C1A"
+           dur="50s" repeatCount="indefinite" />
+        <animate attributeName="offset"
+           values="0.84;0.81;0.87;0.84"
+           dur="44s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.90;0.82;0.95;0.90"
+           dur="36s" repeatCount="indefinite" />
+      </stop>
+      <!-- Indigo-950 deep -->
+      <stop
+         style="stop-color:#170230;stop-opacity:0.95;"
+         offset="0.92"
+         id="stop-indigo2">
+        <animate attributeName="stop-color"
+           values="#170230;#260349;#0a0118;#170230"
+           dur="56s" repeatCount="indefinite" />
+      </stop>
+      <!-- Near-black edge -->
+      <stop
+         style="stop-color:#000a04;stop-opacity:1;"
+         offset="1"
+         id="stop39" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient36">
+      <stop
+         style="stop-color:#ea3684;stop-opacity:0.32294053;"
+         offset="0.00225166"
+         id="stop35">
+        <animate attributeName="stop-color"
+           values="#ea3684;#d44a8e;#f02878;#ea3684"
+           dur="26s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.32;0.40;0.28;0.32"
+           dur="20s" repeatCount="indefinite" />
+      </stop>
+      <stop
+         style="stop-color:#802610;stop-opacity:0.6059984;"
+         offset="1"
+         id="stop36">
+        <animate attributeName="stop-color"
+           values="#802610;#6b1f0d;#943018;#802610"
+           dur="32s" repeatCount="indefinite" />
+        <animate attributeName="stop-opacity"
+           values="0.61;0.50;0.68;0.61"
+           dur="24s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    <linearGradient
+       id="linearGradient8">
+      <stop
+         style="stop-color:#012502;stop-opacity:1;"
+         offset="0"
+         id="stop9" />
+      <stop
+         style="stop-color:#022962;stop-opacity:0.81718409;"
+         offset="1"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.80406505;"
+         offset="0"
+         id="stop3" />
+      <stop
+         style="stop-color:#012502;stop-opacity:0.4254342;"
+         offset="1"
+         id="stop4" />
+    </linearGradient>
+    <radialGradient
+       xlink:href="#linearGradient3"
+       id="radialGradient4"
+       cx="424.19037"
+       cy="378.85306"
+       fx="424.19037"
+       fy="378.85306"
+       r="200"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-17.718025,17.718025)" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient10"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.69941154,-0.38836002,0.38836002,0.69941154,-3.9249855,201.05083)" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient11"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76917065,0.21994664,-0.21994664,0.76917065,252.30035,-27.882235)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient12"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.38836002,0.69941154,-0.69941154,0.38836002,593.78258,-8.0864345)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient13"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.21994664,0.76917065,-0.76917065,-0.21994664,825.97632,253.14506)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient14"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.69941154,0.38836002,-0.38836002,-0.69941154,804.70657,593.8903)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient15"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.76917065,-0.21994664,0.21994664,-0.76917065,547.15995,823.87313)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient16"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.38836002,-0.69941154,0.69941154,-0.38836002,201.99286,804.8143)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient17"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.21994664,-0.76917065,0.76917065,0.21994664,-26.007567,548.32558)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient36"
+       id="linearGradient37"
+       x1="357.87442"
+       y1="-17.701864"
+       x2="362.44275"
+       y2="755.86469"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       xlink:href="#linearGradient38"
+       id="radialGradient39"
+       cx="-441.92822"
+       cy="508.46985"
+       fx="-441.92822"
+       fy="508.46985"
+       r="399.69781"
+       gradientTransform="matrix(-0.01304125,1.9882626,-2.0025712,-0.013135,1016.1316,885.34808)"
+       gradientUnits="userSpaceOnUse">
+      <animateTransform
+         attributeName="gradientTransform"
+         type="rotate"
+         from="0 400 400"
+         to="360 400 400"
+         dur="400s"
+         additive="sum"
+         repeatCount="indefinite" />
+    </radialGradient>
+    <linearGradient
+       xlink:href="#linearGradient51"
+       id="linearGradient50"
+       gradientUnits="userSpaceOnUse"
+       x1="357.87442"
+       y1="-17.701864"
+       x2="362.44275"
+       y2="755.86469" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient69"
+       x1="54.333527"
+       y1="566.34253"
+       x2="351.09518"
+       y2="566.34253"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient70"
+       x1="249.79752"
+       y1="627.90369"
+       x2="515.90491"
+       y2="627.90369"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient71"
+       x1="422.54941"
+       y1="536.86365"
+       x2="705.11255"
+       y2="536.86365"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient72"
+       x1="490.92758"
+       y1="361.14862"
+       x2="764.2785"
+       y2="361.14862"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient73"
+       x1="385.97125"
+       y1="176.48396"
+       x2="682.73291"
+       y2="176.48396"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient74"
+       x1="224.84641"
+       y1="114.18587"
+       x2="490.95377"
+       y2="114.18587"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient75"
+       x1="36.960014"
+       y1="204.17615"
+       x2="319.52316"
+       y2="204.17615"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient80"
+       x1="-23.018749"
+       y1="386.42068"
+       x2="250.33215"
+       y2="386.42068"
+       gradientUnits="userSpaceOnUse" />
+    <!-- Sliding linear gradient — diagonal sweep, cycles through color and black -->
+    <linearGradient
+       id="sliding-gradient"
+       x1="0" y1="0" x2="1200" y2="600"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="repeat">
+      <!-- Black field -->
+      <stop offset="0" style="stop-color:#000000;" />
+      <stop offset="0.08" style="stop-color:#000a04;" />
+      <!-- Color emergence: indigo → magenta → cream → gold → green -->
+      <stop offset="0.16" style="stop-color:#170230;">
+        <animate attributeName="stop-color" values="#170230;#260349;#0a0118;#170230" dur="60s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="0.25" style="stop-color:#be1d9c;stop-opacity:0.7;">
+        <animate attributeName="stop-color" values="#be1d9c;#4c0a7d;#f687dd;#be1d9c" dur="48s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="0.34" style="stop-color:#cc9326;stop-opacity:0.45;">
+        <animate attributeName="stop-color" values="#cc9326;#be1d9c;#a57a1a;#cc9326" dur="52s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="0.42" style="stop-color:#7c6212;stop-opacity:0.4;">
+        <animate attributeName="stop-color" values="#7c6212;#62770c;#a57a1a;#7c6212" dur="44s" repeatCount="indefinite" />
+      </stop>
+      <!-- Dissolve through forest to dark -->
+      <stop offset="0.52" style="stop-color:#013C1A;">
+        <animate attributeName="stop-color" values="#013C1A;#065c2c;#00260f;#013C1A" dur="56s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="0.62" style="stop-color:#000a04;" />
+      <!-- Long black passage before next cycle -->
+      <stop offset="1" style="stop-color:#000000;" />
+      <animateTransform attributeName="gradientTransform" type="translate"
+         from="0 0" to="-1200 -600" dur="120s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <!-- Nebula filter — organic colored blobs for bitmap-like depth -->
+    <filter id="color-nebula" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.003 0.004" numOctaves="3" seed="7" result="nebula" />
+      <feComponentTransfer in="nebula" result="tinted">
+        <feFuncR type="table" tableValues="0 0.03 0.18 0.08 0.02 0" />
+        <feFuncG type="table" tableValues="0 0.01 0.04 0.10 0.03 0" />
+        <feFuncB type="table" tableValues="0 0.06 0.12 0.20 0.08 0" />
+        <feFuncA type="table" tableValues="1 1 1 1 1 1" />
+      </feComponentTransfer>
+    </filter>
+
+    <!-- Warp filter — breaks up the radial gradient's concentric rings -->
+    <filter id="organic-warp" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="turbulence" baseFrequency="0.008 0.006" numOctaves="3"
+         seed="12" result="warp-noise" />
+      <feDisplacementMap in="SourceGraphic" in2="warp-noise"
+         scale="80" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+
+    <!-- Organic noise filter — matches site texture -->
+    <filter id="noise-texture" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch" result="noise" />
+      <feColorMatrix type="saturate" values="0" in="noise" result="mono-noise" />
+    </filter>
+
+    <!-- Warm glow gradient — follows mouse, amber warmth spreading like candlelight -->
+    <radialGradient id="shimmer-gradient" cx="400" cy="400" r="280"
+       gradientUnits="userSpaceOnUse">
+      <stop offset="0" style="stop-color:#EFDD8D;stop-opacity:0.30;" />
+      <stop offset="0.2" style="stop-color:#cc9326;stop-opacity:0.18;" />
+      <stop offset="0.45" style="stop-color:#FAB2EA;stop-opacity:0.08;" />
+      <stop offset="0.7" style="stop-color:#98fd9a;stop-opacity:0.04;" />
+      <stop offset="1" style="stop-color:#000000;stop-opacity:0;" />
+    </radialGradient>
+
+    <!-- Holographic filter — prismatic color split -->
+    <filter id="shimmer-prism" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+      <feColorMatrix type="hueRotate" values="0" result="hue-shifted" id="shimmer-hue" />
+    </filter>
+
+    <!-- Bloom — warm radial glow behind the mandala -->
+    <radialGradient id="bloom-gradient" cx="400" cy="400" r="300"
+       gradientUnits="userSpaceOnUse">
+      <stop offset="0" style="stop-color:#cc9326;stop-opacity:0.5;" />
+      <stop offset="0.3" style="stop-color:#be1d9c;stop-opacity:0.2;" />
+      <stop offset="0.6" style="stop-color:#4c0a7d;stop-opacity:0.1;" />
+      <stop offset="1" style="stop-color:#000000;stop-opacity:0;" />
+    </radialGradient>
+  </defs>
+  <style>
+    /* === Rotation — unhurried, differentiated === */
+    .outer-rotate {
+      animation: rotate-cw 340s linear infinite;
+      transform-origin: 400px 400px;
+    }
+    .middle-rotate {
+      animation: rotate-ccw 400s linear infinite;
+      transform-origin: 400px 400px;
+    }
+    .inner-rotate {
+      animation: rotate-cw 200s linear infinite;
+      transform-origin: 400px 400px;
+    }
+
+    /* === Breathing — cascading wave, anchored to a slow breath ===
+         ~16s cycle ≈ inhale 7s, exhale 9s (longer exhale calms the nervous system)
+         Rings cascade: outer leads, middle follows 3s later, inner 6s later
+         Outer breathes widest, inner is most subtle — like ripples from center */
+    .outer-breathe {
+      animation: breathe-outer 16s ease-in-out infinite;
+      transform-origin: 400px 400px;
+    }
+    .middle-breathe {
+      animation: breathe-middle 16s ease-in-out infinite;
+      animation-delay: -3s;
+      transform-origin: 400px 400px;
+    }
+    .inner-breathe {
+      animation: breathe-inner 16s ease-in-out infinite;
+      animation-delay: -6s;
+      transform-origin: 400px 400px;
+    }
+
+    /* === Wobble — the whole mandala floats gently, like something in calm water === */
+    .mandala-wobble {
+      animation: wobble 50s ease-in-out infinite;
+      transform-origin: 400px 400px;
+    }
+
+    /* === Bloom — warm glow behind the mandala, breathing on its own === */
+    .bloom-pulse {
+      animation: bloom 18s ease-in-out infinite;
+      animation-delay: -2s;
+    }
+
+    @keyframes rotate-cw {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes rotate-ccw {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+
+    /* Outer: widest breath, subtle fade */
+    @keyframes breathe-outer {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      42% { transform: scale(1.025); opacity: 0.77; }
+    }
+    /* Middle: medium breath */
+    @keyframes breathe-middle {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      42% { transform: scale(1.018); opacity: 0.79; }
+    }
+    /* Inner: subtlest breath — center stays most still */
+    @keyframes breathe-inner {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      42% { transform: scale(1.012); opacity: 0.81; }
+    }
+
+    @keyframes wobble {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(0.5deg); }
+      75% { transform: rotate(-0.5deg); }
+    }
+
+    @keyframes bloom {
+      0%, 100% { opacity: 0.22; }
+      42% { opacity: 0.35; }
+    }
+
+    /* Reduce motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .outer-rotate, .middle-rotate, .inner-rotate,
+      .outer-breathe, .middle-breathe, .inner-breathe,
+      .mandala-wobble, .bloom-pulse {
+        animation: none;
+      }
+    }
+  </style>
+  <g id="layer1">
+    <!-- Solid dark fill — prevents warp-filter gaps from showing transparency -->
+    <rect width="800" height="800" fill="#000a04" />
+
+    <!-- Background -->
+    <rect
+       style="display:inline;fill:url(#radialGradient39);fill-opacity:1;stroke:none;paint-order:markers fill stroke"
+       id="rect37"
+       width="799.39563"
+       height="802.52234"
+       x="0"
+       y="-1.0422368"
+       filter="url(#organic-warp)" />
+
+    <!-- Sliding gradient layer — diagonal color sweep cycling through black -->
+    <rect
+       style="fill:url(#sliding-gradient);fill-opacity:0.65;stroke:none;mix-blend-mode:screen;"
+       width="800"
+       height="800"
+       x="0"
+       y="0" />
+
+    <!-- Nebula bitmap layer — organic colored depth -->
+    <rect
+       style="fill:black;stroke:none;mix-blend-mode:screen;"
+       width="800"
+       height="800"
+       x="0"
+       y="0"
+       filter="url(#color-nebula)"
+       opacity="0.6" />
+
+    <!-- Noise texture overlay — matches site's organic feel -->
+    <rect
+       style="fill:white;stroke:none;mix-blend-mode:multiply;"
+       width="800"
+       height="800"
+       x="0"
+       y="0"
+       filter="url(#noise-texture)"
+       opacity="0.12" />
+
+    <!-- Bloom glow — warm light behind the mandala, breathing slowly -->
+    <circle cx="400" cy="400" r="300"
+       fill="url(#bloom-gradient)"
+       style="mix-blend-mode:screen;"
+       class="bloom-pulse" />
+
+    <!-- Mandala with wobble — whole thing floats gently -->
+    <g class="mandala-wobble">
+    <!-- Mandala scaled to 75% for breathing room — centered on 400,400 -->
+    <g transform="translate(400,400) scale(0.75) translate(-400,-400)"
+       style="mix-blend-mode: soft-light; opacity: 0.85;">
+
+    <!-- Outer ring: blue-green petals — slow clockwise + breathing -->
+    <g class="outer-rotate">
+      <g class="outer-breathe">
+        <g id="g17">
+          <path
+             style="display:inline;fill:url(#linearGradient10);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 89.972935,286.53336 C -2.2362585,139.36364 204.83837,87.515717 204.83837,87.515717 c 49.57339,-22.795085 115.52756,41.835473 87.32594,73.108053 -61.09214,-21.52038 -82.47252,34.67161 54.36672,66.1361 17.38357,56.97011 -65.19781,134.70736 -135.9667,152.74778 -36.35689,-0.60797 -106.71772,-67.98867 -120.591395,-92.97429 z"
+             id="path2" />
+          <path
+             style="display:inline;fill:url(#linearGradient11);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 258.25093,98.958896 C 297.11389,-70.307555 480.19978,39.454302 480.19978,39.454302 531.37202,58.389423 532.30796,150.72677 490.25335,152.89827 462.27189,94.482392 407.41994,119.09792 481.93114,238.10663 453.93923,290.68262 340.57684,287.25731 277.77917,249.97265 252.50087,223.83454 250.3936,126.43657 258.25093,98.958896 Z"
+             id="path2-6" />
+          <path
+             style="display:inline;fill:url(#linearGradient12);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 508.30005,85.811487 C 655.46977,-6.3977075 707.31768,200.67693 707.31768,200.67693 c 22.79509,49.57339 -41.83546,115.52756 -73.10804,87.32594 21.52038,-61.09214 -34.67161,-82.47252 -66.1361,54.36672 C 511.10343,359.75316 433.36618,277.17178 415.32576,206.40289 415.93373,170.046 483.31443,99.685166 508.30005,85.811487 Z"
+             id="path2-9" />
+          <path
+             style="display:inline;fill:url(#linearGradient13);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="m 699.13519,259.09564 c 169.26645,38.86296 59.50459,221.94885 59.50459,221.94885 -18.93512,51.17224 -111.27247,52.10818 -113.44396,10.05357 58.41587,-27.98146 33.80035,-82.83341 -85.20836,-8.32221 -52.57599,-27.99191 -49.15068,-141.3543 -11.86602,-204.15197 26.1381,-25.2783 123.53608,-27.38558 151.01375,-19.52824 z"
+             id="path2-1" />
+          <path
+             style="display:inline;fill:url(#linearGradient14);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="m 710.80865,508.40778 c 92.2092,147.16971 -114.86544,199.01764 -114.86544,199.01764 -49.5734,22.79508 -115.52757,-41.83547 -87.32594,-73.10805 61.09214,21.52038 82.47251,-34.67161 -54.36673,-66.1361 -17.38357,-56.97011 65.19782,-134.70736 135.9667,-152.74779 36.3569,0.60798 106.71773,67.98868 120.59141,92.9743 z"
+             id="path2-3" />
+          <path
+             style="display:inline;fill:url(#linearGradient15);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="m 541.20937,697.032 c -38.86296,169.26645 -221.94885,59.50459 -221.94885,59.50459 -51.17224,-18.93512 -52.10818,-111.27246 -10.05357,-113.44396 27.98146,58.41587 82.83341,33.80035 8.32221,-85.20836 27.99191,-52.57599 141.3543,-49.15068 204.15197,-11.86602 25.2783,26.13811 27.38557,123.53608 19.52824,151.01375 z"
+             id="path2-97" />
+          <path
+             style="display:inline;fill:url(#linearGradient16);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 287.47539,710.91638 C 140.30567,803.12557 88.457755,596.05094 88.457755,596.05094 65.662671,546.47755 130.29322,480.52338 161.5658,508.725 c -21.52038,61.09214 34.67161,82.47252 66.1361,-54.36672 56.97011,-17.38357 134.70736,65.19781 152.74778,135.9667 -0.60797,36.35689 -67.98867,106.71773 -92.97429,120.5914 z"
+             id="path2-19" />
+          <path
+             style="display:inline;fill:url(#linearGradient17);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 100.83356,542.375 C -68.432885,503.51204 41.328974,320.42615 41.328974,320.42615 60.264106,269.25392 152.60144,268.31797 154.77293,310.37258 c -58.415865,27.98146 -33.80035,82.83341 85.20836,8.32221 52.57599,27.99191 49.15068,141.3543 11.86602,204.15197 -26.1381,25.2783 -123.53608,27.38558 -151.01375,19.52824 z"
+             id="path2-19-3" />
+        </g>
+      </g>
+    </g>
+
+    <!-- Middle ring: pink-gold petals — slow counter-clockwise + breathing -->
+    <g class="middle-rotate">
+      <g class="middle-breathe">
+        <g id="g25"
+           style="fill:url(#linearGradient37)"
+           transform="matrix(0.7962624,0,0,0.7962624,107.82058,101.65169)">
+          <path
+             style="display:inline;fill:url(#linearGradient37);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 60.618424,259.58269 C -31.590769,112.41297 175.48386,60.565042 175.48386,60.565042 225.05725,37.769957 291.01142,102.40052 262.8098,133.67309 201.71766,112.15271 180.33728,168.3447 317.17652,199.80919 334.56009,256.7793 251.97871,334.51655 181.20982,352.55698 144.85293,351.949 74.492099,284.5683 60.618424,259.58269 Z"
+             id="path2-93" />
+          <path
+             style="display:inline;fill:url(#linearGradient37);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 228.89642,72.008221 C 267.75938,-97.25823 450.84527,12.503627 450.84527,12.503627 502.01751,31.438748 502.95345,123.77609 460.89884,125.94759 432.91738,67.531717 378.06543,92.147245 452.57663,211.15595 424.58472,263.73194 311.22233,260.30664 248.42466,223.02197 223.14636,196.88387 221.03909,99.485895 228.89642,72.008221 Z"
+             id="path2-6-7" />
+          <path
+             style="display:inline;fill:url(#linearGradient37);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="m 478.94554,58.860812 c 147.16972,-92.209194 199.01763,114.865438 199.01763,114.865438 22.79509,49.57339 -41.83546,115.52756 -73.10804,87.32595 21.52038,-61.09214 -34.67161,-82.47252 -66.1361,54.36672 -56.97011,17.38356 -134.70736,-65.19781 -152.74778,-135.9667 0.60797,-36.3569 67.98867,-106.717729 92.97429,-120.591408 z"
+             id="path2-9-4" />
+          <path
+             style="display:inline;fill:url(#linearGradient37);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="m 669.78068,232.14497 c 169.26645,38.86295 59.50459,221.94884 59.50459,221.94884 -18.93512,51.17224 -111.27247,52.10818 -113.44396,10.05357 58.41587,-27.98146 33.80035,-82.83341 -85.20836,-8.32221 -52.57599,-27.99191 -49.15068,-141.35429 -11.86602,-204.15197 26.1381,-25.2783 123.53608,-27.38558 151.01375,-19.52823 z"
+             id="path2-1-5" />
+          <path
+             style="display:inline;fill:url(#linearGradient37);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="m 681.45414,481.45711 c 92.2092,147.1697 -114.86544,199.01763 -114.86544,199.01763 -49.5734,22.79508 -115.52757,-41.83547 -87.32594,-73.10805 61.09214,21.52038 82.47251,-34.67161 -54.36673,-66.1361 -17.38357,-56.9701 65.19782,-134.70735 135.9667,-152.74778 36.3569,0.60798 106.71773,67.98868 120.59141,92.9743 z"
+             id="path2-3-2" />
+          <path
+             style="display:inline;fill:url(#linearGradient37);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 511.85486,670.08132 C 472.9919,839.34777 289.90601,729.58591 289.90601,729.58591 238.73377,710.6508 237.79783,618.31345 279.85244,616.14196 c 27.98146,58.41587 82.83341,33.80035 8.32221,-85.20836 27.99191,-52.57599 141.3543,-49.15068 204.15197,-11.86602 25.2783,26.13811 27.38557,123.53607 19.52824,151.01374 z"
+             id="path2-97-5" />
+          <path
+             style="display:inline;fill:url(#linearGradient37);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 258.12088,683.9657 C 110.95116,776.17489 59.103244,569.10026 59.103244,569.10026 36.30816,519.52687 100.93871,453.5727 132.21129,481.77433 c -21.52038,61.09213 34.67161,82.47251 66.1361,-54.36672 56.97011,-17.38357 134.70736,65.19781 152.74778,135.9667 -0.60797,36.35689 -67.98867,106.71772 -92.97429,120.59139 z"
+             id="path2-19-4" />
+          <path
+             style="display:inline;fill:url(#linearGradient37);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 71.479049,515.42432 C -97.787396,476.56137 11.974463,293.47548 11.974463,293.47548 30.909595,242.30324 123.24693,241.3673 125.41842,283.42191 c -58.415866,27.98146 -33.800351,82.83341 85.20836,8.32221 52.57599,27.99191 49.15068,141.35429 11.86602,204.15197 -26.1381,25.2783 -123.536081,27.38557 -151.013751,19.52823 z"
+             id="path2-19-3-7" />
+        </g>
+      </g>
+    </g>
+
+    <!-- Inner ring: teal-green petals — faster clockwise + breathing -->
+    <g class="inner-rotate">
+      <g class="inner-breathe">
+        <g id="g25-8"
+           style="display:inline;fill:url(#linearGradient50)"
+           transform="matrix(0.2954553,0.37544419,-0.37544419,0.2954553,437.25619,140.24494)">
+          <path
+             style="display:inline;fill:url(#linearGradient75);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke;fill-opacity:1"
+             d="M 60.618424,259.58269 C -31.590769,112.41297 175.48386,60.565042 175.48386,60.565042 225.05725,37.769957 291.01142,102.40052 262.8098,133.67309 201.71766,112.15271 180.33728,168.3447 317.17652,199.80919 334.56009,256.7793 251.97871,334.51655 181.20982,352.55698 144.85293,351.949 74.492099,284.5683 60.618424,259.58269 Z"
+             id="path2-93-8" />
+          <path
+             style="display:inline;fill:url(#linearGradient74);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke;fill-opacity:1"
+             d="M 228.89642,72.008221 C 267.75938,-97.25823 450.84527,12.503627 450.84527,12.503627 502.01751,31.438748 502.95345,123.77609 460.89884,125.94759 432.91738,67.531717 378.06543,92.147245 452.57663,211.15595 424.58472,263.73194 311.22233,260.30664 248.42466,223.02197 223.14636,196.88387 221.03909,99.485895 228.89642,72.008221 Z"
+             id="path2-6-7-8" />
+          <path
+             style="display:inline;fill:url(#linearGradient73);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke;fill-opacity:1"
+             d="m 478.94554,58.860812 c 147.16972,-92.209194 199.01763,114.865438 199.01763,114.865438 22.79509,49.57339 -41.83546,115.52756 -73.10804,87.32595 21.52038,-61.09214 -34.67161,-82.47252 -66.1361,54.36672 -56.97011,17.38356 -134.70736,-65.19781 -152.74778,-135.9667 0.60797,-36.3569 67.98867,-106.717729 92.97429,-120.591408 z"
+             id="path2-9-4-9" />
+          <path
+             style="display:inline;fill:url(#linearGradient72);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke;fill-opacity:1"
+             d="m 669.78068,232.14497 c 169.26645,38.86295 59.50459,221.94884 59.50459,221.94884 -18.93512,51.17224 -111.27247,52.10818 -113.44396,10.05357 58.41587,-27.98146 33.80035,-82.83341 -85.20836,-8.32221 -52.57599,-27.99191 -49.15068,-141.35429 -11.86602,-204.15197 26.1381,-25.2783 123.53608,-27.38558 151.01375,-19.52823 z"
+             id="path2-1-5-7" />
+          <path
+             style="display:inline;fill:url(#linearGradient71);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke;fill-opacity:1"
+             d="m 681.45414,481.45711 c 92.2092,147.1697 -114.86544,199.01763 -114.86544,199.01763 -49.5734,22.79508 -115.52757,-41.83547 -87.32594,-73.10805 61.09214,21.52038 82.47251,-34.67161 -54.36673,-66.1361 -17.38357,-56.9701 65.19782,-134.70735 135.9667,-152.74778 36.3569,0.60798 106.71773,67.98868 120.59141,92.9743 z"
+             id="path2-3-2-7" />
+          <path
+             style="display:inline;fill:url(#linearGradient70);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke;fill-opacity:1"
+             d="M 511.85486,670.08132 C 472.9919,839.34777 289.90601,729.58591 289.90601,729.58591 238.73377,710.6508 237.79783,618.31345 279.85244,616.14196 c 27.98146,58.41587 82.83341,33.80035 8.32221,-85.20836 27.99191,-52.57599 141.3543,-49.15068 204.15197,-11.86602 25.2783,26.13811 27.38557,123.53607 19.52824,151.01374 z"
+             id="path2-97-5-6" />
+          <path
+             style="display:inline;fill:url(#linearGradient69);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke;fill-opacity:1"
+             d="M 258.12088,683.9657 C 110.95116,776.17489 59.103244,569.10026 59.103244,569.10026 36.30816,519.52687 100.93871,453.5727 132.21129,481.77433 c -21.52038,61.09213 34.67161,82.47251 66.1361,-54.36672 56.97011,-17.38357 134.70736,65.19781 152.74778,135.9667 -0.60797,36.35689 -67.98867,106.71772 -92.97429,120.59139 z"
+             id="path2-19-4-4" />
+          <path
+             style="display:inline;fill:url(#linearGradient80);stroke:#f0c3a8;stroke-width:0;paint-order:markers fill stroke"
+             d="M 71.479049,515.42432 C -97.787396,476.56137 11.974463,293.47548 11.974463,293.47548 30.909595,242.30324 123.24693,241.3673 125.41842,283.42191 c -58.415866,27.98146 -33.800351,82.83341 85.20836,8.32221 52.57599,27.99191 49.15068,141.35429 11.86602,204.15197 -26.1381,25.2783 -123.536081,27.38557 -151.013751,19.52823 z"
+             id="path2-19-3-7-3" />
+        </g>
+      </g>
+    </g>
+    </g><!-- end mandala scale wrapper -->
+    </g><!-- end wobble wrapper -->
+
+    <!-- Holographic shimmer overlay — follows mouse -->
+    <rect
+       id="shimmer-overlay"
+       style="fill:url(#shimmer-gradient);stroke:none;mix-blend-mode:screen;pointer-events:none;"
+       width="800"
+       height="800"
+       x="0"
+       y="0"
+       opacity="0"
+       filter="url(#shimmer-prism)" />
+
+    <!-- Border — drawn last so it's on top -->
+    <rect
+       style="fill:none;stroke:#EFDD8D;stroke-width:3;stroke-opacity:0.85;"
+       width="796"
+       height="796"
+       x="2"
+       y="2" />
+  </g>
+
+  <script type="text/javascript"><![CDATA[
+    (function() {
+      var svg = document.querySelector('svg');
+      var grad = document.getElementById('shimmer-gradient');
+      var overlay = document.getElementById('shimmer-overlay');
+      var hueMatrix = document.getElementById('shimmer-hue');
+      var currentOpacity = 0;
+      var targetOpacity = 0;
+      var currentCx = 400, currentCy = 400;
+      var targetCx = 400, targetCy = 400;
+      var fadeTimer = null;
+
+      function getSVGPoint(e) {
+        var pt = svg.createSVGPoint();
+        pt.x = e.clientX;
+        pt.y = e.clientY;
+        return pt.matrixTransform(svg.getScreenCTM().inverse());
+      }
+
+      svg.addEventListener('mousemove', function(e) {
+        var p = getSVGPoint(e);
+        targetCx = p.x;
+        targetCy = p.y;
+        targetOpacity = 0.6;
+
+        // Gentle hue warmth — subtle shift, not full prismatic
+        var angle = Math.atan2(p.y - 400, p.x - 400) * (180 / Math.PI);
+        hueMatrix.setAttribute('values', (((angle + 360) % 360) * 0.3).toFixed(1));
+
+        // Clear any fade-out timer
+        if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = null; }
+      });
+
+      svg.addEventListener('mouseleave', function() {
+        targetOpacity = 0;
+      });
+
+      // Smooth animation loop — slow easing for warmth, not snappiness
+      function animate() {
+        currentCx += (targetCx - currentCx) * 0.04;
+        currentCy += (targetCy - currentCy) * 0.04;
+        currentOpacity += (targetOpacity - currentOpacity) * 0.03;
+
+        grad.setAttribute('cx', currentCx.toFixed(1));
+        grad.setAttribute('cy', currentCy.toFixed(1));
+        grad.setAttribute('fx', currentCx.toFixed(1));
+        grad.setAttribute('fy', currentCy.toFixed(1));
+        overlay.setAttribute('opacity', currentOpacity.toFixed(3));
+
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+  ]]></script>
+</svg>
