@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Read(//home/evergreene/Repos/AnEvergreene/Forest/yours-truly-main/**)"
+    ]
+  }
+}

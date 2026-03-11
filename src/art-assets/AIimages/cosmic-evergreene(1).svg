@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Deep space background -->
+    <radialGradient id="bgCore" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1a2e" />
+      <stop offset="40%" stop-color="#0d0d1a" />
+      <stop offset="100%" stop-color="#050510" />
+    </radialGradient>
+    
+    <!-- Central burst glow -->
+    <radialGradient id="centralGlow" cx="50%" cy="50%" r="30%">
+      <stop offset="0%" stop-color="#EFDD8D" stop-opacity="0.6" />
+      <stop offset="30%" stop-color="#FAB2EA" stop-opacity="0.2" />
+      <stop offset="60%" stop-color="#360568" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#360568" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Nebula color regions -->
+    <radialGradient id="nebulaIndigo" cx="40%" cy="35%" r="45%">
+      <stop offset="0%" stop-color="#360568" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#360568" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nebulaGreen" cx="65%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#013C1A" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#013C1A" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nebulaBlush" cx="55%" cy="40%" r="35%">
+      <stop offset="0%" stop-color="#FAB2EA" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#FAB2EA" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Filters -->
+    <filter id="bigGlow">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+    <filter id="medGlow">
+      <feGaussianBlur stdDeviation="10" />
+    </filter>
+    <filter id="smallGlow">
+      <feGaussianBlur stdDeviation="5" />
+    </filter>
+    <filter id="tinyGlow">
+      <feGaussianBlur stdDeviation="2.5" />
+    </filter>
+    <filter id="streakBlur">
+      <feGaussianBlur stdDeviation="3 1" />
+    </filter>
+    
+    <!-- Turbulence for nebula texture -->
+    <filter id="nebulaTex" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="5" seed="42" result="noise" />
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray" />
+      <feComponentTransfer in="gray" result="shaped">
+        <feFuncA type="table" tableValues="0 0 0.1 0.3 0.5 0.3 0.1 0" />
+      </feComponentTransfer>
+      <feComposite operator="in" in="SourceGraphic" in2="shaped" />
+    </filter>
+    
+    <filter id="nebulaTex2" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" seed="99" result="noise" />
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray" />
+      <feComponentTransfer in="gray" result="shaped">
+        <feFuncA type="table" tableValues="0 0.05 0.2 0.4 0.2 0.05 0" />
+      </feComponentTransfer>
+      <feComposite operator="in" in="SourceGraphic" in2="shaped" />
+    </filter>
+
+    <filter id="displace" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="3" seed="7" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="40" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  
+  <!-- Deep space background -->
+  <rect width="1200" height="630" fill="url(#bgCore)" />
+  
+  <!-- Nebula color wash layers -->
+  <rect width="1200" height="630" fill="url(#nebulaIndigo)" />
+  <rect width="1200" height="630" fill="url(#nebulaGreen)" />
+  <rect width="1200" height="630" fill="url(#nebulaBlush)" />
+  
+  <!-- Large nebula clouds with texture -->
+  <ellipse cx="500" cy="280" rx="500" ry="300" fill="#360568" opacity="0.25" filter="url(#nebulaTex)" />
+  <ellipse cx="700" cy="350" rx="450" ry="280" fill="#013C1A" opacity="0.2" filter="url(#nebulaTex2)" />
+  <ellipse cx="600" cy="315" rx="350" ry="200" fill="#FAB2EA" opacity="0.08" filter="url(#nebulaTex)" />
+  <ellipse cx="550" cy="300" rx="300" ry="250" fill="#EFDD8D" opacity="0.06" filter="url(#nebulaTex2)" />
+  
+  <!-- Central energy burst - large glow layers -->
+  <circle cx="580" cy="300" r="200" fill="#EFDD8D" opacity="0.08" filter="url(#bigGlow)" />
+  <circle cx="580" cy="300" r="120" fill="#FAB2EA" opacity="0.12" filter="url(#bigGlow)" />
+  <circle cx="580" cy="300" r="60" fill="#EFDD8D" opacity="0.25" filter="url(#medGlow)" />
+  <circle cx="580" cy="300" r="25" fill="#F4FDAF" opacity="0.4" filter="url(#smallGlow)" />
+  <circle cx="580" cy="300" r="8" fill="#EFDD8D" opacity="0.7" filter="url(#tinyGlow)" />
+  
+  <!-- Radiating energy streams - main tendrils -->
+  <!-- Using paths that emanate from center with displacement for organic feel -->
+  <g filter="url(#displace)" opacity="0.6">
+    <!-- Upper-left streams -->
+    <path d="M580,300 Q480,200 280,100" stroke="#FAB2EA" stroke-width="3" fill="none" opacity="0.4" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q460,210 200,140" stroke="#EFDD8D" stroke-width="2" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q500,180 320,50" stroke="#F4FDAF" stroke-width="2.5" fill="none" opacity="0.3" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q440,230 150,180" stroke="#FAB2EA" stroke-width="1.5" fill="none" opacity="0.3" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q510,160 380,20" stroke="#EFDD8D" stroke-width="2" fill="none" opacity="0.25" filter="url(#tinyGlow)" />
+    
+    <!-- Upper streams -->
+    <path d="M580,300 Q560,180 500,30" stroke="#EFDD8D" stroke-width="3" fill="none" opacity="0.4" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q600,170 650,10" stroke="#FAB2EA" stroke-width="2.5" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q540,190 440,40" stroke="#F4FDAF" stroke-width="2" fill="none" opacity="0.3" filter="url(#tinyGlow)" />
+    
+    <!-- Upper-right streams -->
+    <path d="M580,300 Q700,190 900,80" stroke="#FAB2EA" stroke-width="3" fill="none" opacity="0.4" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q720,200 1000,120" stroke="#EFDD8D" stroke-width="2.5" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q680,210 950,50" stroke="#F4FDAF" stroke-width="2" fill="none" opacity="0.3" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q740,180 1100,100" stroke="#FAB2EA" stroke-width="1.5" fill="none" opacity="0.25" filter="url(#tinyGlow)" />
+    
+    <!-- Right streams -->
+    <path d="M580,300 Q780,280 1150,250" stroke="#EFDD8D" stroke-width="2.5" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q760,310 1100,340" stroke="#FAB2EA" stroke-width="2" fill="none" opacity="0.3" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q800,260 1180,200" stroke="#F4FDAF" stroke-width="3" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    
+    <!-- Lower-right streams -->
+    <path d="M580,300 Q700,410 920,550" stroke="#EFDD8D" stroke-width="3" fill="none" opacity="0.4" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q720,420 1000,580" stroke="#FAB2EA" stroke-width="2" fill="none" opacity="0.3" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q680,430 850,620" stroke="#F4FDAF" stroke-width="2.5" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q750,400 1100,530" stroke="#EFDD8D" stroke-width="1.5" fill="none" opacity="0.25" filter="url(#tinyGlow)" />
+    
+    <!-- Lower streams -->
+    <path d="M580,300 Q560,440 520,620" stroke="#FAB2EA" stroke-width="2.5" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q610,450 680,630" stroke="#EFDD8D" stroke-width="2" fill="none" opacity="0.3" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q550,460 450,630" stroke="#F4FDAF" stroke-width="3" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    
+    <!-- Lower-left streams -->
+    <path d="M580,300 Q460,400 250,530" stroke="#EFDD8D" stroke-width="3" fill="none" opacity="0.4" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q440,420 180,580" stroke="#FAB2EA" stroke-width="2.5" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q480,390 300,490" stroke="#F4FDAF" stroke-width="2" fill="none" opacity="0.3" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q420,440 100,600" stroke="#EFDD8D" stroke-width="1.5" fill="none" opacity="0.25" filter="url(#tinyGlow)" />
+    
+    <!-- Left streams -->
+    <path d="M580,300 Q380,290 50,270" stroke="#FAB2EA" stroke-width="2.5" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q400,320 80,360" stroke="#EFDD8D" stroke-width="3" fill="none" opacity="0.35" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q360,280 30,220" stroke="#F4FDAF" stroke-width="2" fill="none" opacity="0.3" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q420,260 100,180" stroke="#FAB2EA" stroke-width="1.5" fill="none" opacity="0.25" filter="url(#tinyGlow)" />
+  </g>
+  
+  <!-- Secondary thinner streams for density -->
+  <g filter="url(#displace)" opacity="0.35">
+    <path d="M580,300 Q490,160 350,10" stroke="#EFDD8D" stroke-width="1" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q660,150 780,0" stroke="#FAB2EA" stroke-width="1" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q780,350 1180,420" stroke="#F4FDAF" stroke-width="1" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q380,350 50,430" stroke="#EFDD8D" stroke-width="1" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q530,480 400,630" stroke="#FAB2EA" stroke-width="1" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q640,470 750,630" stroke="#EFDD8D" stroke-width="1" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q450,250 180,80" stroke="#F4FDAF" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q730,230 1050,60" stroke="#FAB2EA" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q340,310 20,330" stroke="#EFDD8D" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q500,430 350,600" stroke="#F4FDAF" stroke-width="1" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q680,380 900,600" stroke="#FAB2EA" stroke-width="1" fill="none" filter="url(#tinyGlow)" />
+    <path d="M580,300 Q550,140 530,0" stroke="#EFDD8D" stroke-width="1.2" fill="none" filter="url(#tinyGlow)" />
+  </g>
+  
+  <!-- Bright energy knots along streams -->
+  <g filter="url(#smallGlow)">
+    <circle cx="420" cy="200" r="5" fill="#EFDD8D" opacity="0.5" />
+    <circle cx="750" cy="180" r="4" fill="#FAB2EA" opacity="0.45" />
+    <circle cx="350" cy="400" r="4.5" fill="#F4FDAF" opacity="0.4" />
+    <circle cx="800" cy="420" r="5" fill="#EFDD8D" opacity="0.45" />
+    <circle cx="480" cy="150" r="3.5" fill="#FAB2EA" opacity="0.4" />
+    <circle cx="700" cy="450" r="4" fill="#EFDD8D" opacity="0.4" />
+    <circle cx="300" cy="300" r="3" fill="#F4FDAF" opacity="0.35" />
+    <circle cx="850" cy="280" r="3.5" fill="#FAB2EA" opacity="0.4" />
+    <circle cx="450" cy="450" r="4" fill="#EFDD8D" opacity="0.35" />
+    <circle cx="720" cy="130" r="3" fill="#F4FDAF" opacity="0.4" />
+  </g>
+  
+  <!-- Star field - scattered points -->
+  <g>
+    <!-- Bright stars -->
+    <circle cx="100" cy="50" r="1.8" fill="#EFDD8D" opacity="0.7" />
+    <circle cx="1100" cy="80" r="2" fill="#FAB2EA" opacity="0.65" />
+    <circle cx="200" cy="550" r="1.5" fill="#F4FDAF" opacity="0.6" />
+    <circle cx="1050" cy="520" r="1.8" fill="#EFDD8D" opacity="0.6" />
+    <circle cx="50" cy="300" r="1.5" fill="#FAB2EA" opacity="0.55" />
+    <circle cx="1170" cy="350" r="1.8" fill="#EFDD8D" opacity="0.6" />
+    <circle cx="150" cy="180" r="2" fill="#F4FDAF" opacity="0.55" />
+    <circle cx="1000" cy="50" r="1.5" fill="#FAB2EA" opacity="0.6" />
+    
+    <!-- Medium stars -->
+    <circle cx="300" cy="80" r="1.2" fill="#EFDD8D" opacity="0.5" />
+    <circle cx="900" cy="560" r="1.2" fill="#FAB2EA" opacity="0.5" />
+    <circle cx="80" cy="450" r="1" fill="#F4FDAF" opacity="0.45" />
+    <circle cx="1130" cy="180" r="1.2" fill="#EFDD8D" opacity="0.5" />
+    <circle cx="950" cy="30" r="1" fill="#FAB2EA" opacity="0.45" />
+    <circle cx="250" cy="600" r="1.2" fill="#EFDD8D" opacity="0.45" />
+    <circle cx="700" cy="20" r="1" fill="#F4FDAF" opacity="0.5" />
+    <circle cx="1080" cy="600" r="1.2" fill="#FAB2EA" opacity="0.45" />
+    <circle cx="400" cy="590" r="1" fill="#EFDD8D" opacity="0.4" />
+    <circle cx="850" cy="10" r="1.2" fill="#F4FDAF" opacity="0.45" />
+    
+    <!-- Dim stars -->
+    <circle cx="170" cy="400" r="0.8" fill="#EFDD8D" opacity="0.35" />
+    <circle cx="500" cy="580" r="0.8" fill="#FAB2EA" opacity="0.3" />
+    <circle cx="1020" cy="250" r="0.8" fill="#F4FDAF" opacity="0.35" />
+    <circle cx="650" cy="590" r="0.7" fill="#EFDD8D" opacity="0.3" />
+    <circle cx="30" cy="150" r="0.8" fill="#FAB2EA" opacity="0.3" />
+    <circle cx="1150" cy="470" r="0.7" fill="#EFDD8D" opacity="0.35" />
+    <circle cx="330" cy="30" r="0.8" fill="#F4FDAF" opacity="0.3" />
+    <circle cx="780" cy="600" r="0.7" fill="#FAB2EA" opacity="0.3" />
+    <circle cx="60" cy="560" r="0.8" fill="#EFDD8D" opacity="0.3" />
+    <circle cx="1100" cy="130" r="0.7" fill="#F4FDAF" opacity="0.35" />
+    <circle cx="450" cy="15" r="0.8" fill="#FAB2EA" opacity="0.3" />
+    <circle cx="620" cy="10" r="0.7" fill="#EFDD8D" opacity="0.3" />
+    <circle cx="130" cy="280" r="0.6" fill="#F4FDAF" opacity="0.25" />
+    <circle cx="980" cy="450" r="0.7" fill="#FAB2EA" opacity="0.3" />
+    <circle cx="40" cy="80" r="0.6" fill="#EFDD8D" opacity="0.25" />
+    <circle cx="1160" cy="560" r="0.7" fill="#F4FDAF" opacity="0.25" />
+  </g>
+  
+  <!-- Extra bright star flares -->
+  <g filter="url(#tinyGlow)">
+    <circle cx="100" cy="50" r="3" fill="#EFDD8D" opacity="0.3" />
+    <circle cx="1100" cy="80" r="3.5" fill="#FAB2EA" opacity="0.25" />
+    <circle cx="1050" cy="520" r="3" fill="#EFDD8D" opacity="0.25" />
+    <circle cx="150" cy="180" r="3" fill="#F4FDAF" opacity="0.2" />
+  </g>
+  
+  <!-- Final central bright core -->
+  <circle cx="580" cy="300" r="15" fill="#EFDD8D" opacity="0.5" filter="url(#tinyGlow)" />
+  <circle cx="580" cy="300" r="4" fill="#F4FDAF" opacity="0.8" />
+</svg>
