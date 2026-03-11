@@ -47,4 +47,12 @@ const art = defineCollection({
   }),
 });
 
-export const collections = { blog, projects, writing, art };
+const photography = defineCollection({
+  type: 'content',
+  schema: baseSchema.extend({
+    image: z.string(),
+    location: z.string().optional(),
+  }),
+});
+
+export const collections = { blog, projects, writing, art, photography };
