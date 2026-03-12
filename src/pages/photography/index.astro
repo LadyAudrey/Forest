@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const photos = (await getCollection('photography', ({ data }) => data.published))
-  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+  .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
 ---
 
 <BaseLayout title="Photography — AnEvergreene Forest" description="Photographs from the Forest and beyond.">
