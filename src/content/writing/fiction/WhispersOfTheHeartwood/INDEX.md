@@ -1,3 +1,10 @@
+---
+title: "Whispers of the Heartwood — File Index"
+date: 2026-03-13
+genre: fiction
+published: false
+---
+
 # Whispers of the Heartwood — File Index
 
 ## Story Bible (private)

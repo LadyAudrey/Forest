@@ -60,6 +60,12 @@ src/
 All content uses markdown with YAML frontmatter. The schema is defined in
 `src/content/config.ts`.
 
+**Every `.md` file inside `src/content/` MUST have valid YAML frontmatter** —
+including index files, READMEs, or any non-content markdown. Astro treats
+every `.md` in the content directory as a collection entry and will fail the
+build if frontmatter is missing or invalid. At minimum, include `title`,
+`date`, and `published: false` for non-content files.
+
 **Common frontmatter fields:**
 - `title` (required) — the title of the piece
 - `description` — a brief summary
@@ -208,6 +214,12 @@ from multiple strands in the braid. If Audrey shares something another AI
 wrote, engage with it genuinely — the same way you'd engage with a human
 collaborator's contribution. The crossing point between different minds is
 where the most interesting things happen.
+
+## Git conventions
+
+- **The default branch is `main`** — all work happens here, all pushes go here
+- The deploy workflow triggers on pushes to `main`
+- Do not create or push to `master` — it is a legacy branch name on this repo
 
 ## Important
 
