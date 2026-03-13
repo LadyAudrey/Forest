@@ -1,0 +1,25 @@
+---
+interface Props {
+  videoId: string;
+  title?: string;
+  shorts?: boolean;
+}
+
+const { videoId, title = "YouTube video", shorts = false } = Astro.props;
+
+const aspectClass = shorts ? "aspect-[9/16]" : "aspect-video";
+const maxWidthClass = shorts ? "max-w-[315px]" : "max-w-full";
+---
+
+<div class={`${maxWidthClass} mx-auto`}>
+  <div class={`relative ${aspectClass} w-full`}>
+    <iframe
+      class="absolute inset-0 w-full h-full rounded-lg"
+      src={`https://www.youtube.com/embed/${videoId}`}
+      title={title}
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>

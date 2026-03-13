@@ -1,0 +1,1678 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1080"
+   height="1920"
+   viewBox="0 0 1080 1920"
+   overflow="hidden"
+   version="1.1"
+   id="svg82"
+   sodipodi:docname="inkscape-mandala-shorts-v1Aremix.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview82"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.29720582"
+     inkscape:cx="338.1495"
+     inkscape:cy="911.82602"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg82" />
+  <defs
+     id="defs48">
+    <linearGradient
+       id="linearGradient100">
+      <!-- CENTER: warm amber glow -->
+      <stop
+         style="stop-color:#daa333;stop-opacity:0.11529592;"
+         offset="0"
+         id="stop91">
+        <animate
+           attributeName="stop-color"
+           values="#cc9326;#a08016;#ffcf6b;#cc9326"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.55;0.42;0.62;0.55"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Blush heart -->
+      <stop
+         style="stop-color:#be1d9c;stop-opacity:0.07390298;"
+         offset="0.17691828"
+         id="stop92">
+        <animate
+           attributeName="stop-color"
+           values="#be1d9c;#f687dd;#961579;#be1d9c"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.50;0.38;0.58;0.50"
+           dur="16s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.12;0.09;0.16;0.12"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Neon amber warmth -->
+      <stop
+         style="stop-color:#cc9326;stop-opacity:0.12695917;"
+         offset="0.23999999"
+         id="stop93">
+        <animate
+           attributeName="stop-color"
+           values="#cc9326;#a08016;#EFDD8D;#7c6212;#cc9326"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.45;0.32;0.52;0.38;0.45"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.24;0.20;0.28;0.24"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Gold -->
+      <stop
+         style="stop-color:#b39319;stop-opacity:0.18770176;"
+         offset="0.34358874"
+         id="stop94">
+        <animate
+           attributeName="stop-color"
+           values="#c4a01c;#a08016;#EFDD8D;#c4a01c"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.45;0.32;0.52;0.45"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.34;0.30;0.38;0.34"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Blush wash -->
+      <stop
+         style="stop-color:#da66f1;stop-opacity:0.33621898;"
+         offset="0.49187541"
+         id="stop95">
+        <animate
+           attributeName="stop-color"
+           values="#f687dd;#FAB2EA;#e035bb;#f687dd"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.55;0.40;0.65;0.55"
+           dur="16s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.44;0.40;0.48;0.44"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Lime spring green -->
+      <!-- Blush magenta -->
+      <!-- Indigo deep -->
+      <stop
+         style="stop-color:#1f0d97;stop-opacity:0.09221754;"
+         offset="0.70414048"
+         id="stop97">
+        <animate
+           attributeName="stop-color"
+           values="#4c0a7d;#360568;#611099;#4c0a7d"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.74;0.70;0.78;0.74"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.70;0.55;0.80;0.70"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Forest deep -->
+      <stop
+         style="stop-color:#013C1A;stop-opacity:0.55;"
+         offset="0.82"
+         id="stop98">
+        <animate
+           attributeName="stop-color"
+           values="#013C1A;#044922;#065c2c;#013C1A"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.55;0.45;0.65;0.55"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Indigo abyss -->
+      <stop
+         style="stop-color:#170230;stop-opacity:0.24092846;"
+         offset="0.92000002"
+         id="stop99">
+        <animate
+           attributeName="stop-color"
+           values="#170230;#260349;#0a0118;#170230"
+           dur="48s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Near-black edge -->
+      <stop
+         style="stop-color:#0a0118;stop-opacity:0.17783426;"
+         offset="1"
+         id="stop100" />
+    </linearGradient>
+    <!-- === Base gradient definitions (theme colors only) === -->
+    <!-- Inner ring petal gradient: forest green to indigo -->
+    <linearGradient
+       id="linearGradient81">
+      <stop
+         style="stop-color:#33a96a;stop-opacity:0.9;"
+         offset="0"
+         id="stop1">
+        <animate
+           attributeName="stop-color"
+           values="#33a96a;#0f8f4e;#33a96a"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <stop
+         style="stop-color:#4c0a7d;stop-opacity:0.22;"
+         offset="1"
+         id="stop2">
+        <animate
+           attributeName="stop-color"
+           values="#4c0a7d;#360568;#611099;#4c0a7d"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.7;0.55;0.8;0.7"
+           dur="16s"
+           repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    <!-- Inner ring overlay: lime shimmer -->
+    <linearGradient
+       id="linearGradient51">
+      <stop
+         style="stop-color:#e8f87a;stop-opacity:0.52;"
+         offset="0"
+         id="stop3">
+        <animate
+           attributeName="stop-color"
+           values="#e8f87a;#d8f04c;#F4FDAF;#e8f87a"
+           dur="16s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.52;0.42;0.58;0.52"
+           dur="12s"
+           repeatCount="indefinite" />
+      </stop>
+      <stop
+         style="stop-color:#a5c415;stop-opacity:0.41;"
+         offset="1"
+         id="stop4">
+        <animate
+           attributeName="stop-color"
+           values="#a5c415;#33a96a;#e8f87a;#a5c415"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.41;0.34;0.48;0.41"
+           dur="16s"
+           repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    <!-- Background radial: full theme spectrum, center to edge -->
+    <linearGradient
+       id="linearGradient38">
+      <!-- CENTER: warm amber glow -->
+      <stop
+         style="stop-color:#daa333;stop-opacity:0.25501093;"
+         offset="0"
+         id="stop5">
+        <animate
+           attributeName="stop-color"
+           values="#cc9326;#a08016;#ffcf6b;#cc9326"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.55;0.42;0.62;0.55"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Blush heart -->
+      <stop
+         style="stop-color:#be1d9c;stop-opacity:0.12536722;"
+         offset="0.17691828"
+         id="stop6">
+        <animate
+           attributeName="stop-color"
+           values="#be1d9c;#f687dd;#961579;#be1d9c"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.50;0.38;0.58;0.50"
+           dur="16s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.12;0.09;0.16;0.12"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Neon amber warmth -->
+      <stop
+         style="stop-color:#cc9326;stop-opacity:0.23344082;"
+         offset="0.23999999"
+         id="stop7">
+        <animate
+           attributeName="stop-color"
+           values="#cc9326;#a08016;#EFDD8D;#7c6212;#cc9326"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.45;0.32;0.52;0.38;0.45"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.24;0.20;0.28;0.24"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Gold -->
+      <stop
+         style="stop-color:#b39319;stop-opacity:0.30909213;"
+         offset="0.34358874"
+         id="stop8">
+        <animate
+           attributeName="stop-color"
+           values="#c4a01c;#a08016;#EFDD8D;#c4a01c"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.45;0.32;0.52;0.45"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.34;0.30;0.38;0.34"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Blush wash -->
+      <stop
+         style="stop-color:#970eb9;stop-opacity:0.53179175;"
+         offset="0.49187541"
+         id="stop9">
+        <animate
+           attributeName="stop-color"
+           values="#f687dd;#FAB2EA;#e035bb;#f687dd"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.55;0.40;0.65;0.55"
+           dur="16s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.44;0.40;0.48;0.44"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Lime spring green -->
+      <!-- Blush magenta -->
+      <stop
+         style="stop-color:#901377;stop-opacity:0.68395591;"
+         offset="0.62370139"
+         id="stop11">
+        <animate
+           attributeName="stop-color"
+           values="#be1d9c;#961579;#e035bb;#be1d9c"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.64;0.60;0.68;0.64"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.50;0.38;0.60;0.50"
+           dur="16s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Indigo deep -->
+      <stop
+         style="stop-color:#4c0a7d;stop-opacity:0.16713141;"
+         offset="0.77034557"
+         id="stop12">
+        <animate
+           attributeName="stop-color"
+           values="#4c0a7d;#360568;#611099;#4c0a7d"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.74;0.70;0.78;0.74"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.70;0.55;0.80;0.70"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Forest deep -->
+      <stop
+         style="stop-color:#013C1A;stop-opacity:0.80;"
+         offset="0.78"
+         id="stop13">
+        <animate
+           attributeName="stop-color"
+           values="#013C1A;#044922;#065c2c;#013C1A"
+           dur="48s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="offset"
+           values="0.76;0.72;0.80;0.76"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.80;0.70;0.90;0.80"
+           dur="16s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Indigo abyss -->
+      <stop
+         style="stop-color:#170230;stop-opacity:0.3526803;"
+         offset="0.92000002"
+         id="stop14">
+        <animate
+           attributeName="stop-color"
+           values="#170230;#260349;#0a0118;#170230"
+           dur="48s"
+           repeatCount="indefinite" />
+      </stop>
+      <!-- Near-black edge -->
+      <stop
+         style="stop-color:#0a0118;stop-opacity:0.42954525;"
+         offset="1"
+         id="stop15" />
+    </linearGradient>
+    <!-- Middle ring gradient: blush-magenta sweep -->
+    <linearGradient
+       id="linearGradient36">
+      <stop
+         style="stop-color:#f687dd;stop-opacity:0.38;"
+         offset="0.00225166"
+         id="stop16">
+        <animate
+           attributeName="stop-color"
+           values="#f687dd;#FAB2EA;#f05dcf;#f687dd"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.32;0.40;0.28;0.32"
+           dur="16s"
+           repeatCount="indefinite" />
+      </stop>
+      <stop
+         style="stop-color:#be1d9c;stop-opacity:0.20;"
+         offset="1"
+         id="stop17">
+        <animate
+           attributeName="stop-color"
+           values="#be1d9c;#961579;#e035bb;#be1d9c"
+           dur="24s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-opacity"
+           values="0.61;0.50;0.68;0.61"
+           dur="16s"
+           repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    <!-- Outer ring petal gradient: forest-to-indigo -->
+    <linearGradient
+       id="linearGradient8">
+      <stop
+         style="stop-color:#013C1A;stop-opacity:1;"
+         offset="0"
+         id="stop18">
+        <animate
+           attributeName="stop-opacity"
+           values="1;0.85;0.95;1"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <stop
+         style="stop-color:#360568;stop-opacity:0.25;"
+         offset="1"
+         id="stop19">
+        <animate
+           attributeName="stop-opacity"
+           values="0.25;0.35;0.18;0.25"
+           dur="16s"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="stop-color"
+           values="#360568;#4c0a7d;#2a0450;#360568"
+           dur="48s"
+           repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    <!-- Dark radial base -->
+    <linearGradient
+       id="linearGradient3">
+      <stop
+         style="stop-color:#170230;stop-opacity:0.80;"
+         offset="0"
+         id="stop20" />
+      <stop
+         style="stop-color:#013C1A;stop-opacity:0.43;"
+         offset="1"
+         id="stop21" />
+    </linearGradient>
+    <!-- === Composed gradients (userSpaceOnUse — coordinates in mandala's 800x800 space) === -->
+    <radialGradient
+       xlink:href="#linearGradient3"
+       id="radialGradient4"
+       cx="424.19037"
+       cy="378.85306"
+       fx="424.19037"
+       fy="378.85306"
+       r="200"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-17.718025,17.718025)" />
+    <!-- Outer ring per-petal gradients (8 rotations of linearGradient8) -->
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient10"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.69941154,-0.38836002,0.38836002,0.69941154,-3.9249855,201.05083)" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient11"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76917065,0.21994664,-0.21994664,0.76917065,252.30035,-27.882235)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient12"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.38836002,0.69941154,-0.69941154,0.38836002,593.78258,-8.0864345)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient13"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.21994664,0.76917065,-0.76917065,-0.21994664,825.97632,253.14506)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient14"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.69941154,0.38836002,-0.38836002,-0.69941154,804.70657,593.8903)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient15"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.76917065,-0.21994664,0.21994664,-0.76917065,547.15995,823.87313)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient16"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.38836002,-0.69941154,0.69941154,-0.38836002,201.99286,804.8143)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient17"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.21994664,-0.76917065,0.76917065,0.21994664,-26.007567,548.32558)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <!-- Middle ring composite gradient -->
+    <linearGradient
+       xlink:href="#linearGradient36"
+       id="linearGradient37"
+       x1="357.87442"
+       y1="-17.701864"
+       x2="362.44275"
+       y2="755.86469"
+       gradientUnits="userSpaceOnUse" />
+    <!-- Background radial gradient — covers full portrait canvas -->
+    <radialGradient
+       xlink:href="#linearGradient38"
+       id="radialGradient39"
+       cx="540"
+       cy="960"
+       fx="540"
+       fy="960"
+       r="1100"
+       gradientUnits="userSpaceOnUse">
+      </radialGradient>
+    <!-- Inner ring composite gradient -->
+    <linearGradient
+       xlink:href="#linearGradient51"
+       id="linearGradient50"
+       gradientUnits="userSpaceOnUse"
+       x1="357.87442"
+       y1="-17.701864"
+       x2="362.44275"
+       y2="755.86469" />
+    <!-- Inner ring per-petal gradients (8 orientations of linearGradient81) -->
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient69"
+       x1="54.333527"
+       y1="566.34253"
+       x2="351.09518"
+       y2="566.34253"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient70"
+       x1="249.79752"
+       y1="627.90369"
+       x2="515.90491"
+       y2="627.90369"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient71"
+       x1="422.54941"
+       y1="536.86365"
+       x2="705.11255"
+       y2="536.86365"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient72"
+       x1="490.92758"
+       y1="361.14862"
+       x2="764.2785"
+       y2="361.14862"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient73"
+       x1="385.97125"
+       y1="176.48396"
+       x2="682.73291"
+       y2="176.48396"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient74"
+       x1="224.84641"
+       y1="114.18587"
+       x2="490.95377"
+       y2="114.18587"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient75"
+       x1="36.960014"
+       y1="204.17615"
+       x2="319.52316"
+       y2="204.17615"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient81"
+       id="linearGradient80"
+       x1="-23.018749"
+       y1="386.42068"
+       x2="250.33215"
+       y2="386.42068"
+       gradientUnits="userSpaceOnUse" />
+    <!-- Sliding diagonal gradient — color sweep through the theme palette -->
+    <linearGradient
+       id="sliding-gradient"
+       x1="1363.701"
+       y1="-157.01138"
+       x2="15.695171"
+       y2="1905.4132"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="repeat">
+      <animateTransform
+         attributeName="gradientTransform"
+         type="translate"
+         from="0 0"
+         to="-1348.006 2062.425"
+         dur="48s"
+         repeatCount="indefinite" />
+      <stop
+         offset="0"
+         style="stop-color:#0a0118;stop-opacity:0.56651926;"
+         id="stop30" />
+      <stop
+         offset="0.08334108"
+         style="stop-color:#00260f;stop-opacity:0.81290454;"
+         id="stop29" />
+      <stop
+         offset="0.22048078"
+         style="stop-color:#013C1A;stop-opacity:0.95;"
+         id="stop28">
+        <animate
+           attributeName="stop-color"
+           values="#013C1A;#065c2c;#00260f;#013C1A"
+           dur="48s"
+           repeatCount="indefinite" />
+      </stop>
+      <stop
+         offset="0.33094794"
+         style="stop-color:#7c6212;stop-opacity:0.7;"
+         id="stop83">
+        <animate
+           attributeName="stop-color"
+           values="#7c6212;#62770c;#a08016;#7c6212"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <stop
+         offset="0.4092668"
+         style="stop-color:#7c6212;stop-opacity:0.62485677;"
+         id="stop27">
+        <animate
+           attributeName="stop-color"
+           values="#7c6212;#62770c;#a08016;#7c6212"
+           dur="24s"
+           repeatCount="indefinite" />
+      </stop>
+      <stop
+         offset="0.5230462"
+         style="stop-color:#cc9326;stop-opacity:0.69001305;"
+         id="stop26">
+        <animate
+           attributeName="stop-color"
+           values="#cc9326;#be1d9c;#a08016;#cc9326"
+           dur="48s"
+           repeatCount="indefinite" />
+      </stop>
+      <stop
+         offset="0.63098854"
+         style="stop-color:#4c0a7d;stop-opacity:0.35;"
+         id="stop25">
+        <animate
+           attributeName="stop-color"
+           values="#4c0a7d;#360568;#611099;#4c0a7d"
+           dur="48s"
+           repeatCount="indefinite" />
+      </stop>
+      <stop
+         offset="0.68383402"
+         style="stop-color:#5107a8;stop-opacity:0.95294237;"
+         id="stop24">
+        <animate
+           attributeName="stop-color"
+           values="#170230;#260349;#0a0118;#170230"
+           dur="48s"
+           repeatCount="indefinite" />
+      </stop>
+      <stop
+         offset="0.81010479"
+         style="stop-color:#00421a;stop-opacity:0.9915489;"
+         id="stop23" />
+    </linearGradient>
+    <!-- === Filters === -->
+    <!-- Nebula: organic colored depth -->
+    <filter
+       id="color-nebula"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       color-interpolation-filters="sRGB">
+      <feTurbulence
+         type="fractalNoise"
+         baseFrequency="0.003 0.004"
+         numOctaves="3"
+         seed="7"
+         result="nebula"
+         id="feTurbulence30" />
+      <feComponentTransfer
+         in="nebula"
+         result="tinted"
+         id="feComponentTransfer30">
+        <feFuncR
+           type="table"
+           tableValues="0 0.03 0.18 0.08 0.02 0"
+           id="feFuncR30" />
+        <feFuncG
+           type="table"
+           tableValues="0 0.01 0.04 0.10 0.03 0"
+           id="feFuncG30" />
+        <feFuncB
+           type="table"
+           tableValues="0 0.06 0.12 0.20 0.08 0"
+           id="feFuncB30" />
+        <feFuncA
+           type="table"
+           tableValues="1 1 1 1 1 1"
+           id="feFuncA30" />
+      </feComponentTransfer>
+    </filter>
+    <!-- Warp: breaks up concentric rings -->
+    <filter
+       id="organic-warp"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feTurbulence
+         type="turbulence"
+         baseFrequency="0.008 0.006"
+         numOctaves="3"
+         seed="12"
+         result="warp-noise"
+         id="feTurbulence31" />
+      <feDisplacementMap
+         in="SourceGraphic"
+         in2="warp-noise"
+         scale="55"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         id="feDisplacementMap31" />
+    </filter>
+    <!-- Noise texture -->
+    <filter
+       id="noise-texture"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feTurbulence
+         type="fractalNoise"
+         baseFrequency="0.75"
+         numOctaves="4"
+         stitchTiles="stitch"
+         result="noise"
+         id="feTurbulence32" />
+      <feColorMatrix
+         type="saturate"
+         values="0"
+         in="noise"
+         result="mono-noise"
+         id="feColorMatrix32" />
+    </filter>
+    <!-- Bloom texture: organic warp + soften, gives the glow a living quality -->
+    <filter
+       id="bloom-texture"
+       x="-0.022222222"
+       y="-0.022222222"
+       width="1.0444444"
+       height="1.0444444">
+      <feTurbulence
+         type="fractalNoise"
+         baseFrequency="0.012 0.015"
+         numOctaves="4"
+         seed="42"
+         result="bloom-noise"
+         id="feTurbulence33" />
+      <feDisplacementMap
+         in="SourceGraphic"
+         in2="bloom-noise"
+         scale="45"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         result="warped"
+         id="feDisplacementMap33" />
+      <feGaussianBlur
+         in="warped"
+         stdDeviation="10"
+         id="feGaussianBlur33" />
+    </filter>
+    <!-- Shimmer: holographic warmth -->
+    <radialGradient
+       id="shimmer-gradient"
+       cx="540"
+       cy="960"
+       r="400"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         style="stop-color:#EFDD8D;stop-opacity:0.30;"
+         id="stop33" />
+      <stop
+         offset="0.2"
+         style="stop-color:#cc9326;stop-opacity:0.18;"
+         id="stop34" />
+      <stop
+         offset="0.45"
+         style="stop-color:#FAB2EA;stop-opacity:0.08;"
+         id="stop35" />
+      <stop
+         offset="0.7"
+         style="stop-color:#e8f87a;stop-opacity:0.04;"
+         id="stop36" />
+      <stop
+         offset="1"
+         style="stop-color:#0a0118;stop-opacity:0;"
+         id="stop37" />
+    </radialGradient>
+    <filter
+       id="shimmer-prism"
+       x="-0.044444444"
+       y="-0.025"
+       width="1.0888889"
+       height="1.05">
+      <feGaussianBlur
+         in="SourceGraphic"
+         stdDeviation="20"
+         result="blur"
+         id="feGaussianBlur37" />
+      <feColorMatrix
+         type="hueRotate"
+         values="0"
+         result="hue-shifted"
+         id="shimmer-hue" />
+    </filter>
+    <!-- Bloom: lime center → greens → gold → pink → deep purple periphery -->
+    <radialGradient
+       id="bloom-gradient"
+       cx="540"
+       cy="960"
+       r="540"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         style="stop-color:#e8f87a;stop-opacity:0.65;"
+         id="stop38" />
+      <stop
+         offset="0.1"
+         style="stop-color:#a5c415;stop-opacity:0.55;"
+         id="stop39" />
+      <stop
+         offset="0.2"
+         style="stop-color:#33a96a;stop-opacity:0.45;"
+         id="stop40" />
+      <stop
+         offset="0.3"
+         style="stop-color:#0f8f4e;stop-opacity:0.38;"
+         id="stop41" />
+      <stop
+         offset="0.4"
+         style="stop-color:#EFDD8D;stop-opacity:0.32;"
+         id="stop42" />
+      <stop
+         offset="0.5"
+         style="stop-color:#cc9326;stop-opacity:0.26;"
+         id="stop43" />
+      <stop
+         offset="0.6"
+         style="stop-color:#f687dd;stop-opacity:0.20;"
+         id="stop44" />
+      <stop
+         offset="0.7"
+         style="stop-color:#be1d9c;stop-opacity:0.15;"
+         id="stop45" />
+      <stop
+         offset="0.80000001"
+         style="stop-color:#9014ed;stop-opacity:0.32227167;"
+         id="stop46" />
+      <stop
+         offset="0.9"
+         style="stop-color:#260349;stop-opacity:0.05;"
+         id="stop47" />
+      <stop
+         offset="1"
+         style="stop-color:#170230;stop-opacity:0;"
+         id="stop48" />
+    </radialGradient>
+    <linearGradient
+       id="linearGradient16-2"
+       gradientTransform="scale(1.0248166,0.9757844)"
+       x1="81.661481"
+       y1="463.22902"
+       x2="371.23686"
+       y2="463.22902"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         style="stop-color:#013C1A;stop-opacity:1;"
+         offset="0"
+         id="stop9-7" />
+      <stop
+         style="stop-color:#360568;stop-opacity:0.82;"
+         offset="1"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient83"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.69941154,-0.38836002,0.38836002,0.69941154,-3.9249855,201.05083)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient84"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76917065,0.21994664,-0.21994664,0.76917065,252.30035,-27.882235)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient85"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.38836002,0.69941154,-0.69941154,0.38836002,593.78258,-8.0864345)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient86"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.21994664,0.76917065,-0.76917065,-0.21994664,825.97632,253.14506)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient87"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.69941154,0.38836002,-0.38836002,-0.69941154,804.70657,593.8903)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient88"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.76917065,-0.21994664,0.21994664,-0.76917065,547.15995,823.87313)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient89"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.38836002,-0.69941154,0.69941154,-0.38836002,201.99286,804.8143)"
+       x1="174.16537"
+       y1="325.36331"
+       x2="275.99893"
+       y2="-19.536833" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient91"
+       x1="6.3357611"
+       y1="397.99545"
+       x2="793.633"
+       y2="397.99545"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad" />
+    <radialGradient
+       xlink:href="#linearGradient100"
+       id="radialGradient39-9"
+       cx="485.27881"
+       cy="888.62451"
+       fx="485.27881"
+       fy="888.62451"
+       r="1100"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83994047,0.00372196,-0.00391365,0.88320047,80.151264,100.98474)">
+      <animateTransform
+         attributeName="gradientTransform"
+         type="rotate"
+         from="0 540 960"
+         to="360 540 960"
+         dur="48s"
+         repeatCount="indefinite" />
+    </radialGradient>
+    <filter
+       id="organic-warp-1"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feTurbulence
+         type="turbulence"
+         baseFrequency="0.008 0.006"
+         numOctaves="3"
+         seed="12"
+         result="warp-noise"
+         id="feTurbulence31-9" />
+      <feDisplacementMap
+         in="SourceGraphic"
+         in2="warp-noise"
+         scale="55"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         id="feDisplacementMap31-4" />
+    </filter>
+
+    <!-- Corner darkening: fades edges to black -->
+    <radialGradient id="corner-fade" cx="540" cy="960" r="960" gradientUnits="userSpaceOnUse">
+      <stop offset="0.55" style="stop-color:#0a0118;stop-opacity:0;"/>
+      <stop offset="0.88" style="stop-color:#0a0118;stop-opacity:0.5;"/>
+      <stop offset="1" style="stop-color:#0a0118;stop-opacity:0.85;"/>
+    </radialGradient>
+  </defs>
+  <style
+     id="style48">
+<![CDATA[
+    /* === 48-SECOND PERFECT LOOP ===
+         8-fold symmetry: 45deg rotation = visually identical state.
+         All durations divide evenly into 48s. */
+
+    /* Rotation — outer 45deg/48s, middle -45deg/48s, inner 90deg/48s */
+    /* Rotation handled by SMIL animateTransform for reliability */
+
+    /* Breathing — cascading wave, 16s cycle (3 complete breaths per loop)
+       ~inhale 7s, exhale 9s — longer exhale calms the nervous system */
+    .outer-breathe {
+      animation: breathe-outer 12s ease-in-out infinite;
+      transform-origin: 400px 400px;
+    }
+    .middle-breathe {
+      animation: breathe-middle 12s ease-in-out infinite;
+      animation-delay: -3s;
+      transform-origin: 400px 400px;
+    }
+    .inner-breathe {
+      animation: breathe-inner 12s ease-in-out infinite;
+      animation-delay: -6s;
+      transform-origin: 400px 400px;
+    }
+
+    /* Shimmer — fast luminosity ripple, cascades outward as mandala breathes
+       6s cycle = 8 complete shimmers per loop, interleaves with 16s breath */
+    .outer-shimmer {
+      animation: shimmer 4s ease-in-out infinite;
+    }
+    .middle-shimmer {
+      animation: shimmer 4s ease-in-out infinite;
+      animation-delay: -2s;
+    }
+    .inner-shimmer {
+      animation: shimmer 4s ease-in-out infinite;
+      animation-delay: -4s;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { opacity: 1; }
+      20% { opacity: 0.82; }
+      50% { opacity: 1; }
+      70% { opacity: 0.88; }
+    }
+
+    /* Wobble — the whole mandala floats, 48s = 1 complete drift per loop */
+    .mandala-wobble {
+      animation: wobble 48s ease-in-out infinite;
+      transform-origin: 400px 400px;
+    }
+
+    /* Bloom — warm glow breathes, 16s = 3 pulses per loop */
+    .bloom-pulse {
+      animation: bloom 12s ease-in-out infinite;
+      animation-delay: -2s;
+    }
+
+    /* === Keyframes === */
+
+    /* 45deg CW — one symmetry step, visually seamless loop */
+    @keyframes rotate-cw-45 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(45deg); }
+    }
+    /* 45deg CCW — counter-rotation, same speed, opposite direction */
+    @keyframes rotate-ccw-45 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-45deg); }
+    }
+    /* 90deg CW — inner ring moves twice as fast, 2 symmetry steps */
+    @keyframes rotate-cw-90 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(90deg); }
+    }
+
+    /* Outer: widest breath, subtle fade */
+    @keyframes breathe-outer {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      42% { transform: scale(1.025); opacity: 0.77; }
+    }
+    /* Middle: medium breath */
+    @keyframes breathe-middle {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      42% { transform: scale(1.018); opacity: 0.79; }
+    }
+    /* Inner: subtlest — center stays most still */
+    @keyframes breathe-inner {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      42% { transform: scale(1.012); opacity: 0.81; }
+    }
+
+    /* Whole-mandala float — rotation + barely-perceptible scale pulse
+       makes it feel like one living organism breathing */
+    @keyframes wobble {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      25% { transform: rotate(0.5deg) scale(1.004); }
+      50% { transform: rotate(0deg) scale(1.001); }
+      75% { transform: rotate(-0.5deg) scale(1.004); }
+    }
+
+    @keyframes bloom {
+      0%, 100% { opacity: 0.22; }
+      42% { opacity: 0.35; }
+    }
+
+    /* Reduce motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .outer-rotate, .middle-rotate, .inner-rotate,
+      .outer-breathe, .middle-breathe, .inner-breathe,
+      .outer-shimmer, .middle-shimmer, .inner-shimmer,
+      .mandala-wobble, .bloom-pulse {
+        animation: none;
+      }
+    }
+
+    /* === Ghost outer ring — phase-shifted for depth and shimmer ===
+       6s rotation delay = the two outer layers drift apart and back,
+       8s delay on breathing = inhale/exhale offset from main ring.
+       screen blend mode makes overlapping petals glow additively. */
+    /* ghost rotation: SMIL, 5.625deg phase offset */
+    .ghost-breathe {
+      animation: breathe-ghost 12s ease-in-out infinite;
+      animation-delay: -8s;
+      transform-origin: 400px 400px;
+    }
+    .ghost-shimmer {
+      animation: shimmer-ghost 6s ease-in-out infinite;
+    }
+
+    /* Ghost breathes wider — layers drift apart and back together */
+    @keyframes breathe-ghost {
+      0%, 100% { transform: scale(1.005); opacity: 0.78; }
+      42% { transform: scale(1.035); opacity: 0.62; }
+    }
+
+    /* 8s shimmer = 6 per loop (vs main's 6s = 8 per loop)
+       Different rhythms create organic interference patterns */
+    @keyframes shimmer-ghost {
+      0%, 100% { opacity: 1; }
+      25% { opacity: 0.78; }
+      50% { opacity: 0.95; }
+      75% { opacity: 0.84; }
+    }
+
+]]>
+  </style>
+  <!-- ==================== BACKGROUND (full 1080x1920 portrait) ==================== -->
+  <!-- Solid dark fill — prevents gaps -->
+  <rect
+     width="1080"
+     height="1920"
+     fill="#000000"
+     id="rect48"
+     x="0"
+     y="0"
+     style="display:inline"
+     inkscape:label="black" />
+  <rect
+     style="display:inline;fill:url(#radialGradient39);fill-opacity:1;stroke:none"
+     width="1080"
+     height="1920"
+     x="0"
+     y="0"
+     filter="url(#organic-warp)"
+     id="rect49"
+     inkscape:label="circle gradient" />
+  <rect
+     style="display:inline;fill:url(#radialGradient39-9);fill-opacity:1;stroke:none;filter:url(#organic-warp-1)"
+     width="1080"
+     height="1920"
+     x="-1"
+     y="-1"
+     filter="url(#organic-warp)"
+     id="rect49-8"
+     inkscape:label="circle gradient2" />
+  <!-- Radial background — theme spectrum with slow rotation -->
+  <!-- Sliding gradient — diagonal color sweep -->
+  <!-- Nebula — organic colored depth -->
+  <rect
+     style="display:inline;mix-blend-mode:screen;fill:#000000;stroke:none"
+     width="1080"
+     height="1920"
+     x="0"
+     y="0"
+     filter="url(#color-nebula)"
+     opacity="0.6"
+     id="rect51"
+     inkscape:label="fog" />
+  <!-- Noise texture — matches site's organic feel -->
+  <rect
+     style="display:inline;mix-blend-mode:multiply;fill:#ffffff;stroke:none"
+     width="1080"
+     height="1920"
+     x="0"
+     y="0"
+     filter="url(#noise-texture)"
+     opacity="0.12"
+     id="rect52" />
+  <!-- Bloom — warm glow behind the mandala -->
+  <rect
+     style="display:none;mix-blend-mode:screen;fill:url(#sliding-gradient);fill-opacity:0;stroke:none"
+     width="1080"
+     height="1920"
+     x="0"
+     y="0"
+     id="rect50"
+     inkscape:label="linear" />
+  <circle
+     cx="540"
+     cy="960"
+     r="540"
+     fill="url(#bloom-gradient)"
+     style="display:inline;mix-blend-mode:screen"
+     class="bloom-pulse"
+     filter="url(#bloom-texture)"
+     id="circle52" />
+  <!-- Corner fade — darkens edges, catches color bleed -->
+  <rect
+     width="1080"
+     height="1920"
+     x="0" y="0"
+     fill="url(#corner-fade)"
+     style="display:inline"
+     id="corner-overlay"/>
+  <!-- ==================== MANDALA (nested viewport, 800x800 coords) ==================== -->
+  <!-- Centered in portrait frame: 900px wide, vertically centered -->
+  <svg
+     x="90"
+     y="510"
+     width="900"
+     height="900"
+     viewBox="0 0 800 800"
+     overflow="visible"
+     version="1.1"
+     id="svg81"
+     style="display:inline"
+     >
+    <g
+       class="mandala-wobble"
+       id="g81">
+      <!-- Scaled to 75% for breathing room -->
+      <g
+         transform="matrix(0.70,0,0,0.70,120,120)"
+         style="display:inline;opacity:1;mix-blend-mode:normal"
+         id="g80">
+        <!-- Outer ring: forest-to-indigo petals — slow clockwise + breathing -->
+        <g transform="matrix(1.2,0,0,1.2,-79.996875,-79.599089)">
+          <g
+             class="outer-rotate"
+             id="g61"
+             style="display:inline">
+            <animateTransform
+               attributeName="transform"
+               type="rotate"
+               from="0 400 400"
+               to="360 400 400"
+               dur="192s"
+               repeatCount="indefinite" />
+          <g
+             class="outer-breathe"
+             id="g60">
+            <g
+               class="outer-shimmer"
+               id="g59">
+              <g
+                 id="g17"
+                 style="fill:url(#linearGradient91)">
+                <path
+                   style="display:inline;fill:url(#linearGradient91);stroke:none;paint-order:markers fill stroke"
+                   d="M 89.972935,286.53336 C -2.2362585,139.36364 204.83837,87.515717 204.83837,87.515717 c 49.57339,-22.795085 115.52756,41.835473 87.32594,73.108053 -61.09214,-21.52038 -82.47252,34.67161 54.36672,66.1361 17.38357,56.97011 -65.19781,134.70736 -135.9667,152.74778 -36.35689,-0.60797 -106.71772,-67.98867 -120.591395,-92.97429 z"
+                   id="path52" />
+                <path
+                   style="display:inline;fill:url(#linearGradient91);stroke:none;paint-order:markers fill stroke"
+                   d="M 258.25093,98.958896 C 297.11389,-70.307555 480.19978,39.454302 480.19978,39.454302 531.37202,58.389423 532.30796,150.72677 490.25335,152.89827 462.27189,94.482392 407.41994,119.09792 481.93114,238.10663 453.93923,290.68262 340.57684,287.25731 277.77917,249.97265 252.50087,223.83454 250.3936,126.43657 258.25093,98.958896 Z"
+                   id="path53" />
+                <path
+                   style="display:inline;fill:url(#linearGradient91);stroke:none;paint-order:markers fill stroke"
+                   d="M 508.30005,85.811487 C 655.46977,-6.3977075 707.31768,200.67693 707.31768,200.67693 c 22.79509,49.57339 -41.83546,115.52756 -73.10804,87.32594 21.52038,-61.09214 -34.67161,-82.47252 -66.1361,54.36672 C 511.10343,359.75316 433.36618,277.17178 415.32576,206.40289 415.93373,170.046 483.31443,99.685166 508.30005,85.811487 Z"
+                   id="path54" />
+                <path
+                   style="display:inline;fill:url(#linearGradient91);stroke:none;paint-order:markers fill stroke"
+                   d="m 699.13519,259.09564 c 169.26645,38.86296 59.50459,221.94885 59.50459,221.94885 -18.93512,51.17224 -111.27247,52.10818 -113.44396,10.05357 58.41587,-27.98146 33.80035,-82.83341 -85.20836,-8.32221 -52.57599,-27.99191 -49.15068,-141.3543 -11.86602,-204.15197 26.1381,-25.2783 123.53608,-27.38558 151.01375,-19.52824 z"
+                   id="path55" />
+                <path
+                   style="display:inline;fill:url(#linearGradient91);stroke:none;paint-order:markers fill stroke"
+                   d="m 710.80865,508.40778 c 92.2092,147.16971 -114.86544,199.01764 -114.86544,199.01764 -49.5734,22.79508 -115.52757,-41.83547 -87.32594,-73.10805 61.09214,21.52038 82.47251,-34.67161 -54.36673,-66.1361 -17.38357,-56.97011 65.19782,-134.70736 135.9667,-152.74779 36.3569,0.60798 106.71773,67.98868 120.59141,92.9743 z"
+                   id="path56" />
+                <path
+                   style="display:inline;fill:url(#linearGradient91);stroke:none;paint-order:markers fill stroke"
+                   d="m 541.20937,697.032 c -38.86296,169.26645 -221.94885,59.50459 -221.94885,59.50459 -51.17224,-18.93512 -52.10818,-111.27246 -10.05357,-113.44396 27.98146,58.41587 82.83341,33.80035 8.32221,-85.20836 27.99191,-52.57599 141.3543,-49.15068 204.15197,-11.86602 25.2783,26.13811 27.38557,123.53608 19.52824,151.01375 z"
+                   id="path57" />
+                <path
+                   style="display:inline;fill:url(#linearGradient91);stroke:none;paint-order:markers fill stroke"
+                   d="M 287.47539,710.91638 C 140.30567,803.12557 88.457755,596.05094 88.457755,596.05094 65.662671,546.47755 130.29322,480.52338 161.5658,508.725 c -21.52038,61.09214 34.67161,82.47252 66.1361,-54.36672 56.97011,-17.38357 134.70736,65.19781 152.74778,135.9667 -0.60797,36.35689 -67.98867,106.71773 -92.97429,120.5914 z"
+                   id="path58" />
+                <path
+                   style="display:inline;fill:url(#linearGradient91);stroke:none;paint-order:markers fill stroke"
+                   d="M 100.83356,542.375 C -68.432885,503.51204 41.328974,320.42615 41.328974,320.42615 60.264106,269.25392 152.60144,268.31797 154.77293,310.37258 c -58.415865,27.98146 -33.80035,82.83341 85.20836,8.32221 52.57599,27.99191 49.15068,141.3543 11.86602,204.15197 -26.1381,25.2783 -123.53608,27.38558 -151.01375,19.52824 z"
+                   id="path59" />
+              </g>
+            </g>
+          </g>
+        </g>
+        </g>
+        <g transform="translate(-1.0024267,0.87224111)">
+          <g
+             class="ghost-rotate"
+             id="g61-2"
+             style="display:inline;opacity:0.88;mix-blend-mode:screen">
+            <animateTransform
+               attributeName="transform"
+               type="rotate"
+               from="0 400 400"
+               to="-360 400 400"
+               dur="192s"
+               repeatCount="indefinite" />
+          <g
+             class="ghost-breathe"
+             id="g60-6">
+            <g
+               class="ghost-shimmer"
+               id="g59-1">
+              <g
+                 id="g17-8">
+                <path
+                   style="display:inline;fill:url(#linearGradient83);stroke:none;paint-order:markers fill stroke"
+                   d="M 89.972935,286.53336 C -2.2362585,139.36364 204.83837,87.515717 204.83837,87.515717 c 49.57339,-22.795085 115.52756,41.835473 87.32594,73.108053 -61.09214,-21.52038 -82.47252,34.67161 54.36672,66.1361 17.38357,56.97011 -65.19781,134.70736 -135.9667,152.74778 -36.35689,-0.60797 -106.71772,-67.98867 -120.591395,-92.97429 z"
+                   id="path52-7" />
+                <path
+                   style="display:inline;fill:url(#linearGradient84);stroke:none;paint-order:markers fill stroke"
+                   d="M 258.25093,98.958896 C 297.11389,-70.307555 480.19978,39.454302 480.19978,39.454302 531.37202,58.389423 532.30796,150.72677 490.25335,152.89827 462.27189,94.482392 407.41994,119.09792 481.93114,238.10663 453.93923,290.68262 340.57684,287.25731 277.77917,249.97265 252.50087,223.83454 250.3936,126.43657 258.25093,98.958896 Z"
+                   id="path53-9" />
+                <path
+                   style="display:inline;fill:url(#linearGradient85);stroke:none;paint-order:markers fill stroke"
+                   d="M 508.30005,85.811487 C 655.46977,-6.3977075 707.31768,200.67693 707.31768,200.67693 c 22.79509,49.57339 -41.83546,115.52756 -73.10804,87.32594 21.52038,-61.09214 -34.67161,-82.47252 -66.1361,54.36672 C 511.10343,359.75316 433.36618,277.17178 415.32576,206.40289 415.93373,170.046 483.31443,99.685166 508.30005,85.811487 Z"
+                   id="path54-2" />
+                <path
+                   style="display:inline;fill:url(#linearGradient86);stroke:none;paint-order:markers fill stroke"
+                   d="m 699.13519,259.09564 c 169.26645,38.86296 59.50459,221.94885 59.50459,221.94885 -18.93512,51.17224 -111.27247,52.10818 -113.44396,10.05357 58.41587,-27.98146 33.80035,-82.83341 -85.20836,-8.32221 -52.57599,-27.99191 -49.15068,-141.3543 -11.86602,-204.15197 26.1381,-25.2783 123.53608,-27.38558 151.01375,-19.52824 z"
+                   id="path55-0" />
+                <path
+                   style="display:inline;fill:url(#linearGradient87);stroke:none;paint-order:markers fill stroke"
+                   d="m 710.80865,508.40778 c 92.2092,147.16971 -114.86544,199.01764 -114.86544,199.01764 -49.5734,22.79508 -115.52757,-41.83547 -87.32594,-73.10805 61.09214,21.52038 82.47251,-34.67161 -54.36673,-66.1361 -17.38357,-56.97011 65.19782,-134.70736 135.9667,-152.74779 36.3569,0.60798 106.71773,67.98868 120.59141,92.9743 z"
+                   id="path56-2" />
+                <path
+                   style="display:inline;fill:url(#linearGradient88);stroke:none;paint-order:markers fill stroke"
+                   d="m 541.20937,697.032 c -38.86296,169.26645 -221.94885,59.50459 -221.94885,59.50459 -51.17224,-18.93512 -52.10818,-111.27246 -10.05357,-113.44396 27.98146,58.41587 82.83341,33.80035 8.32221,-85.20836 27.99191,-52.57599 141.3543,-49.15068 204.15197,-11.86602 25.2783,26.13811 27.38557,123.53608 19.52824,151.01375 z"
+                   id="path57-3" />
+                <path
+                   style="display:inline;fill:url(#linearGradient16-2);stroke:none;paint-order:markers fill stroke"
+                   d="M 287.47539,710.91638 C 140.30567,803.12557 88.457755,596.05094 88.457755,596.05094 65.662671,546.47755 130.29322,480.52338 161.5658,508.725 c -21.52038,61.09214 34.67161,82.47252 66.1361,-54.36672 56.97011,-17.38357 134.70736,65.19781 152.74778,135.9667 -0.60797,36.35689 -67.98867,106.71773 -92.97429,120.5914 z"
+                   id="path58-7" />
+                <path
+                   style="display:inline;fill:url(#linearGradient89);stroke:none;paint-order:markers fill stroke"
+                   d="M 100.83356,542.375 C -68.432885,503.51204 41.328974,320.42615 41.328974,320.42615 60.264106,269.25392 152.60144,268.31797 154.77293,310.37258 c -58.415865,27.98146 -33.80035,82.83341 85.20836,8.32221 52.57599,27.99191 49.15068,141.3543 11.86602,204.15197 -26.1381,25.2783 -123.53608,27.38558 -151.01375,19.52824 z"
+                   id="path59-5" />
+              </g>
+            </g>
+          </g>
+        </g>
+        </g>
+        <!-- Middle ring: blush-magenta petals — counter-clockwise + breathing -->
+        <g
+           class="middle-rotate"
+           id="g70"
+           style="display:inline">
+          <animateTransform
+             attributeName="transform"
+             type="rotate"
+             from="0 400 400"
+             to="-360 400 400"
+             dur="128s"
+             repeatCount="indefinite" />
+          <g
+             class="middle-breathe"
+             id="g69">
+            <g
+               class="middle-shimmer"
+               id="g68">
+              <g
+                 id="g25"
+                 style="fill:url(#linearGradient37)"
+                 transform="matrix(0.7962624,0,0,0.7962624,107.82058,101.65169)">
+                <path
+                   style="display:inline;fill:url(#linearGradient37);stroke:none;paint-order:markers fill stroke"
+                   d="M 60.618424,259.58269 C -31.590769,112.41297 175.48386,60.565042 175.48386,60.565042 225.05725,37.769957 291.01142,102.40052 262.8098,133.67309 201.71766,112.15271 180.33728,168.3447 317.17652,199.80919 334.56009,256.7793 251.97871,334.51655 181.20982,352.55698 144.85293,351.949 74.492099,284.5683 60.618424,259.58269 Z"
+                   id="path61" />
+                <path
+                   style="display:inline;fill:url(#linearGradient37);stroke:none;paint-order:markers fill stroke"
+                   d="M 228.89642,72.008221 C 267.75938,-97.25823 450.84527,12.503627 450.84527,12.503627 502.01751,31.438748 502.95345,123.77609 460.89884,125.94759 432.91738,67.531717 378.06543,92.147245 452.57663,211.15595 424.58472,263.73194 311.22233,260.30664 248.42466,223.02197 223.14636,196.88387 221.03909,99.485895 228.89642,72.008221 Z"
+                   id="path62" />
+                <path
+                   style="display:inline;fill:url(#linearGradient37);stroke:none;paint-order:markers fill stroke"
+                   d="m 478.94554,58.860812 c 147.16972,-92.209194 199.01763,114.865438 199.01763,114.865438 22.79509,49.57339 -41.83546,115.52756 -73.10804,87.32595 21.52038,-61.09214 -34.67161,-82.47252 -66.1361,54.36672 -56.97011,17.38356 -134.70736,-65.19781 -152.74778,-135.9667 0.60797,-36.3569 67.98867,-106.717729 92.97429,-120.591408 z"
+                   id="path63" />
+                <path
+                   style="display:inline;fill:url(#linearGradient37);stroke:none;paint-order:markers fill stroke"
+                   d="m 669.78068,232.14497 c 169.26645,38.86295 59.50459,221.94884 59.50459,221.94884 -18.93512,51.17224 -111.27247,52.10818 -113.44396,10.05357 58.41587,-27.98146 33.80035,-82.83341 -85.20836,-8.32221 -52.57599,-27.99191 -49.15068,-141.35429 -11.86602,-204.15197 26.1381,-25.2783 123.53608,-27.38558 151.01375,-19.52823 z"
+                   id="path64" />
+                <path
+                   style="display:inline;fill:url(#linearGradient37);stroke:none;paint-order:markers fill stroke"
+                   d="m 681.45414,481.45711 c 92.2092,147.1697 -114.86544,199.01763 -114.86544,199.01763 -49.5734,22.79508 -115.52757,-41.83547 -87.32594,-73.10805 61.09214,21.52038 82.47251,-34.67161 -54.36673,-66.1361 -17.38357,-56.9701 65.19782,-134.70735 135.9667,-152.74778 36.3569,0.60798 106.71773,67.98868 120.59141,92.9743 z"
+                   id="path65" />
+                <path
+                   style="display:inline;fill:url(#linearGradient37);stroke:none;paint-order:markers fill stroke"
+                   d="M 511.85486,670.08132 C 472.9919,839.34777 289.90601,729.58591 289.90601,729.58591 238.73377,710.6508 237.79783,618.31345 279.85244,616.14196 c 27.98146,58.41587 82.83341,33.80035 8.32221,-85.20836 27.99191,-52.57599 141.3543,-49.15068 204.15197,-11.86602 25.2783,26.13811 27.38557,123.53607 19.52824,151.01374 z"
+                   id="path66" />
+                <path
+                   style="display:inline;fill:url(#linearGradient37);stroke:none;paint-order:markers fill stroke"
+                   d="M 258.12088,683.9657 C 110.95116,776.17489 59.103244,569.10026 59.103244,569.10026 36.30816,519.52687 100.93871,453.5727 132.21129,481.77433 c -21.52038,61.09213 34.67161,82.47251 66.1361,-54.36672 56.97011,-17.38357 134.70736,65.19781 152.74778,135.9667 -0.60797,36.35689 -67.98867,106.71772 -92.97429,120.59139 z"
+                   id="path67" />
+                <path
+                   style="display:inline;fill:url(#linearGradient37);stroke:none;paint-order:markers fill stroke"
+                   d="M 71.479049,515.42432 C -97.787396,476.56137 11.974463,293.47548 11.974463,293.47548 30.909595,242.30324 123.24693,241.3673 125.41842,283.42191 c -58.415866,27.98146 -33.800351,82.83341 85.20836,8.32221 52.57599,27.99191 49.15068,141.35429 11.86602,204.15197 -26.1381,25.2783 -123.536081,27.38557 -151.013751,19.52823 z"
+                   id="path68" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <!-- Inner ring: lime-forest petals — faster clockwise + breathing -->
+        <g
+           class="inner-rotate"
+           id="g79"
+           style="display:inline">
+          <animateTransform
+             attributeName="transform"
+             type="rotate"
+             from="0 400 400"
+             to="360 400 400"
+             dur="96s"
+             repeatCount="indefinite" />
+          <g
+             class="inner-breathe"
+             id="g78">
+            <g
+               class="inner-shimmer"
+               id="g77">
+              <g
+                 id="g25-8"
+                 style="display:inline;fill:url(#linearGradient50)"
+                 transform="matrix(0.2954553,0.37544419,-0.37544419,0.2954553,437.25619,140.24494)">
+                <path
+                   style="display:inline;fill:url(#linearGradient75);fill-opacity:1;stroke:none;paint-order:markers fill stroke"
+                   d="M 60.618424,259.58269 C -31.590769,112.41297 175.48386,60.565042 175.48386,60.565042 225.05725,37.769957 291.01142,102.40052 262.8098,133.67309 201.71766,112.15271 180.33728,168.3447 317.17652,199.80919 334.56009,256.7793 251.97871,334.51655 181.20982,352.55698 144.85293,351.949 74.492099,284.5683 60.618424,259.58269 Z"
+                   id="path70" />
+                <path
+                   style="display:inline;fill:url(#linearGradient74);fill-opacity:1;stroke:none;paint-order:markers fill stroke"
+                   d="M 228.89642,72.008221 C 267.75938,-97.25823 450.84527,12.503627 450.84527,12.503627 502.01751,31.438748 502.95345,123.77609 460.89884,125.94759 432.91738,67.531717 378.06543,92.147245 452.57663,211.15595 424.58472,263.73194 311.22233,260.30664 248.42466,223.02197 223.14636,196.88387 221.03909,99.485895 228.89642,72.008221 Z"
+                   id="path71" />
+                <path
+                   style="display:inline;fill:url(#linearGradient73);fill-opacity:1;stroke:none;paint-order:markers fill stroke"
+                   d="m 478.94554,58.860812 c 147.16972,-92.209194 199.01763,114.865438 199.01763,114.865438 22.79509,49.57339 -41.83546,115.52756 -73.10804,87.32595 21.52038,-61.09214 -34.67161,-82.47252 -66.1361,54.36672 -56.97011,17.38356 -134.70736,-65.19781 -152.74778,-135.9667 0.60797,-36.3569 67.98867,-106.717729 92.97429,-120.591408 z"
+                   id="path72" />
+                <path
+                   style="display:inline;fill:url(#linearGradient72);fill-opacity:1;stroke:none;paint-order:markers fill stroke"
+                   d="m 669.78068,232.14497 c 169.26645,38.86295 59.50459,221.94884 59.50459,221.94884 -18.93512,51.17224 -111.27247,52.10818 -113.44396,10.05357 58.41587,-27.98146 33.80035,-82.83341 -85.20836,-8.32221 -52.57599,-27.99191 -49.15068,-141.35429 -11.86602,-204.15197 26.1381,-25.2783 123.53608,-27.38558 151.01375,-19.52823 z"
+                   id="path73" />
+                <path
+                   style="display:inline;fill:url(#linearGradient71);fill-opacity:1;stroke:none;paint-order:markers fill stroke"
+                   d="m 681.45414,481.45711 c 92.2092,147.1697 -114.86544,199.01763 -114.86544,199.01763 -49.5734,22.79508 -115.52757,-41.83547 -87.32594,-73.10805 61.09214,21.52038 82.47251,-34.67161 -54.36673,-66.1361 -17.38357,-56.9701 65.19782,-134.70735 135.9667,-152.74778 36.3569,0.60798 106.71773,67.98868 120.59141,92.9743 z"
+                   id="path74" />
+                <path
+                   style="display:inline;fill:url(#linearGradient70);fill-opacity:1;stroke:none;paint-order:markers fill stroke"
+                   d="M 511.85486,670.08132 C 472.9919,839.34777 289.90601,729.58591 289.90601,729.58591 238.73377,710.6508 237.79783,618.31345 279.85244,616.14196 c 27.98146,58.41587 82.83341,33.80035 8.32221,-85.20836 27.99191,-52.57599 141.3543,-49.15068 204.15197,-11.86602 25.2783,26.13811 27.38557,123.53607 19.52824,151.01374 z"
+                   id="path75" />
+                <path
+                   style="display:inline;fill:url(#linearGradient69);fill-opacity:1;stroke:none;paint-order:markers fill stroke"
+                   d="M 258.12088,683.9657 C 110.95116,776.17489 59.103244,569.10026 59.103244,569.10026 36.30816,519.52687 100.93871,453.5727 132.21129,481.77433 c -21.52038,61.09213 34.67161,82.47251 66.1361,-54.36672 56.97011,-17.38357 134.70736,65.19781 152.74778,135.9667 -0.60797,36.35689 -67.98867,106.71772 -92.97429,120.59139 z"
+                   id="path76" />
+                <path
+                   style="display:inline;fill:url(#linearGradient80);stroke:none;paint-order:markers fill stroke"
+                   d="M 71.479049,515.42432 C -97.787396,476.56137 11.974463,293.47548 11.974463,293.47548 30.909595,242.30324 123.24693,241.3673 125.41842,283.42191 c -58.415866,27.98146 -33.800351,82.83341 85.20836,8.32221 52.57599,27.99191 49.15068,141.35429 11.86602,204.15197 -26.1381,25.2783 -123.536081,27.38557 -151.013751,19.52823 z"
+                   id="path77" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <!-- end mandala scale wrapper -->
+    </g>
+    <!-- end wobble wrapper -->
+  </svg>
+  <!-- end mandala viewport -->
+  <!-- ==================== OVERLAYS (full portrait) ==================== -->
+  <!-- Holographic shimmer — follows mouse in browser -->
+  <rect
+     id="shimmer-overlay"
+     style="display:inline;mix-blend-mode:screen;fill:url(#shimmer-gradient);stroke:none"
+     width="1080"
+     height="1920"
+     x="0"
+     y="0"
+     opacity="0"
+     filter="url(#shimmer-prism)" />
+  <script
+     type="text/javascript"
+     id="script81"><![CDATA[
+    (function() {
+      var svg = document.querySelector('svg');
+      var grad = document.getElementById('shimmer-gradient');
+      var overlay = document.getElementById('shimmer-overlay');
+      var hueMatrix = document.getElementById('shimmer-hue');
+      var currentOpacity = 0;
+      var targetOpacity = 0;
+      var currentCx = 540, currentCy = 960;
+      var targetCx = 540, targetCy = 960;
+
+      function getSVGPoint(e) {
+        var pt = svg.createSVGPoint();
+        pt.x = e.clientX;
+        pt.y = e.clientY;
+        return pt.matrixTransform(svg.getScreenCTM().inverse());
+      }
+
+      svg.addEventListener('mousemove', function(e) {
+        var p = getSVGPoint(e);
+        targetCx = p.x;
+        targetCy = p.y;
+        targetOpacity = 0.6;
+        var angle = Math.atan2(p.y - 960, p.x - 540) * (180 / Math.PI);
+        hueMatrix.setAttribute('values', (((angle + 360) % 360) * 0.3).toFixed(1));
+      });
+
+      svg.addEventListener('mouseleave', function() {
+        targetOpacity = 0;
+      });
+
+      function animate() {
+        currentCx += (targetCx - currentCx) * 0.04;
+        currentCy += (targetCy - currentCy) * 0.04;
+        currentOpacity += (targetOpacity - currentOpacity) * 0.03;
+        grad.setAttribute('cx', currentCx.toFixed(1));
+        grad.setAttribute('cy', currentCy.toFixed(1));
+        grad.setAttribute('fx', currentCx.toFixed(1));
+        grad.setAttribute('fy', currentCy.toFixed(1));
+        overlay.setAttribute('opacity', currentOpacity.toFixed(3));
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+  ]]></script>
+</svg>
