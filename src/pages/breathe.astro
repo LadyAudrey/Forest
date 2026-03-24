@@ -1,0 +1,594 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="Breathe — AnEvergreene Forest" description="A guided breathing practice with an animated mandala. Choose a pranayama pattern and breathe along.">
+  <div id="breathe-app" class="flex flex-col items-center -mt-4">
+
+    <!-- Phase display — floats above the mandala -->
+    <div id="phase-display" class="text-center h-20 flex flex-col justify-center">
+      <div id="phase-text" class="text-3xl font-heading text-gold-300 opacity-0 transition-opacity duration-700 dark:text-gold-200">
+        Inhale
+      </div>
+      <div id="phase-sub" class="text-sm text-text-muted mt-1 opacity-0 transition-opacity duration-500"></div>
+    </div>
+
+    <!-- Retention overlay — visible during the hold phase -->
+    <div id="retention-overlay" class="hidden absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none">
+      <div id="retention-timer" class="text-5xl font-heading text-gold-200 tabular-nums glow-text" style="text-shadow: 0 0 20px var(--color-glow);">
+        0:00
+      </div>
+      <div class="text-sm text-text-muted mt-3 animate-pulse">
+        Press any key or tap to release
+      </div>
+    </div>
+
+    <!-- Mandala container -->
+    <div id="mandala-container" class="w-full max-w-xl aspect-square relative">
+      <div id="mandala-loading" class="absolute inset-0 flex items-center justify-center">
+        <span class="text-text-muted text-sm">Loading mandala...</span>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div id="progress-section" class="w-full max-w-xs mx-auto mt-4 mb-2">
+      <div id="progress-bar" class="h-1 rounded-full bg-border overflow-hidden">
+        <div id="progress-fill" class="h-full rounded-full transition-none" style="width: 0%; background: var(--color-accent);"></div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div id="controls" class="mt-4 w-full max-w-md px-4 transition-opacity duration-500">
+      <!-- Presets -->
+      <div class="flex flex-wrap gap-2 justify-center mb-5">
+        <button data-preset="calm" class="preset-btn active">Calm</button>
+        <button data-preset="box" class="preset-btn">Box</button>
+        <button data-preset="478" class="preset-btn">4-7-8</button>
+        <button data-preset="extended" class="preset-btn">Extended Exhale</button>
+        <button data-preset="custom" class="preset-btn">Custom</button>
+      </div>
+
+      <!-- Custom controls -->
+      <div id="custom-controls" class="hidden space-y-3 mb-5 p-4 rounded-lg bg-surface border border-border">
+        <div class="flex items-center gap-3">
+          <label class="w-20 text-sm text-text-secondary">Inhale</label>
+          <input type="range" id="slider-inhale" min="2" max="12" step="1" value="4"
+            class="flex-1 accent-accent">
+          <span id="val-inhale" class="w-6 text-sm text-text-muted text-right">4</span><span class="text-xs text-text-muted">s</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <label class="w-20 text-sm text-text-secondary">Hold in</label>
+          <input type="range" id="slider-hold1" min="0" max="12" step="1" value="0"
+            class="flex-1 accent-accent">
+          <span id="val-hold1" class="w-6 text-sm text-text-muted text-right">0</span><span class="text-xs text-text-muted">s</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <label class="w-20 text-sm text-text-secondary">Exhale</label>
+          <input type="range" id="slider-exhale" min="2" max="16" step="1" value="6"
+            class="flex-1 accent-accent">
+          <span id="val-exhale" class="w-6 text-sm text-text-muted text-right">6</span><span class="text-xs text-text-muted">s</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <label class="w-20 text-sm text-text-secondary">Hold out</label>
+          <input type="range" id="slider-hold2" min="0" max="12" step="1" value="0"
+            class="flex-1 accent-accent">
+          <span id="val-hold2" class="w-6 text-sm text-text-muted text-right">0</span><span class="text-xs text-text-muted">s</span>
+        </div>
+      </div>
+
+      <!-- Rounds & Retention settings -->
+      <div id="session-settings" class="flex flex-wrap items-center justify-center gap-4 mb-5 text-sm">
+        <div class="flex items-center gap-2">
+          <label class="text-text-secondary">Rounds</label>
+          <button id="rounds-down" class="w-7 h-7 rounded-full border border-border text-text-muted hover:border-accent hover:text-accent transition-colors">&minus;</button>
+          <span id="rounds-val" class="w-6 text-center text-text font-medium">3</span>
+          <button id="rounds-up" class="w-7 h-7 rounded-full border border-border text-text-muted hover:border-accent hover:text-accent transition-colors">+</button>
+        </div>
+        <div class="flex items-center gap-2">
+          <label class="text-text-secondary">Retain after</label>
+          <button id="retain-inhale" class="retain-btn active">Inhale</button>
+          <button id="retain-exhale" class="retain-btn">Exhale</button>
+          <button id="retain-none" class="retain-btn">None</button>
+        </div>
+      </div>
+
+      <!-- Play / Pause -->
+      <div class="flex justify-center gap-4">
+        <button id="play-btn" class="px-8 py-2.5 rounded-full border border-accent text-accent font-medium hover:bg-accent hover:text-bg transition-colors duration-300 text-lg">
+          Begin
+        </button>
+      </div>
+
+      <!-- Session result (hidden until retention is released) -->
+      <div id="session-result" class="hidden text-center mt-5 p-4 rounded-lg bg-surface border border-border">
+        <div class="text-text-secondary text-sm">You held for</div>
+        <div id="result-duration" class="text-2xl font-heading text-accent mt-1"></div>
+        <div class="text-text-muted text-xs mt-2">
+          <span id="result-rounds"></span> rounds of breathing completed
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style is:global>
+    /* Dial back the treeline on this page so controls read clearly */
+    .fixed[aria-hidden="true"] {
+      opacity: 0.3 !important;
+    }
+  </style>
+
+  <style>
+    .preset-btn {
+      padding: 0.375rem 0.875rem;
+      border-radius: 9999px;
+      border: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+      transition: all 200ms ease;
+      background: transparent;
+      cursor: pointer;
+    }
+    .preset-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+    .preset-btn.active {
+      background: var(--color-accent);
+      color: var(--color-bg);
+      border-color: var(--color-accent);
+    }
+    .preset-btn.active:hover {
+      box-shadow: 0 0 12px 2px var(--color-glow);
+    }
+
+    .retain-btn {
+      padding: 0.25rem 0.625rem;
+      border-radius: 9999px;
+      border: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+      font-size: 0.75rem;
+      transition: all 200ms ease;
+      background: transparent;
+      cursor: pointer;
+    }
+    .retain-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+    .retain-btn.active {
+      background: var(--color-accent);
+      color: var(--color-bg);
+      border-color: var(--color-accent);
+    }
+
+    input[type="range"] {
+      height: 4px;
+      border-radius: 2px;
+      background: var(--color-border);
+      outline: none;
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+
+  <script define:vars={{ base }}>
+    // =============================================
+    // Breathing engine with rounds + retention
+    // =============================================
+
+    // === Presets ===
+    const PRESETS = {
+      calm:     { inhale: 4, hold1: 0, exhale: 6, hold2: 0 },
+      box:      { inhale: 4, hold1: 4, exhale: 4, hold2: 4 },
+      '478':    { inhale: 4, hold1: 7, exhale: 8, hold2: 0 },
+      extended: { inhale: 4, hold1: 0, exhale: 8, hold2: 2 },
+    };
+
+    // === State ===
+    let currentPattern = { ...PRESETS.calm };
+    let targetRounds = 3;
+    let retainAfter = 'inhale';  // 'inhale', 'exhale', or 'none'
+
+    // Engine state: 'idle' | 'breathing' | 'transition' | 'retention' | 'complete'
+    let engineState = 'idle';
+    let startTime = null;
+    let animFrame = null;
+    let cycles = 0;
+    let prevPhase = null;
+
+    // Retention state
+    let retentionStart = null;
+    let retentionDuration = 0;
+
+    // DOM refs for mandala rings
+    let outerBreathe, middleBreathe, innerBreathe;
+
+    // === Load mandala ===
+    async function loadMandala() {
+      try {
+        const res = await fetch(base + '/art/mandalas/inkscape-mandala.svg');
+        const svgText = await res.text();
+        const container = document.getElementById('mandala-container');
+        container.innerHTML = svgText;
+
+        const overrideStyle = document.createElement('style');
+        overrideStyle.textContent = `
+          .outer-breathe, .middle-breathe, .inner-breathe {
+            animation: none !important;
+          }
+        `;
+        const svg = container.querySelector('svg');
+        svg.appendChild(overrideStyle);
+        svg.setAttribute('width', '100%');
+        svg.setAttribute('height', '100%');
+        svg.style.display = 'block';
+
+        outerBreathe = container.querySelector('.outer-breathe');
+        middleBreathe = container.querySelector('.middle-breathe');
+        innerBreathe = container.querySelector('.inner-breathe');
+
+        applyScale(0);
+      } catch (e) {
+        document.getElementById('mandala-loading').textContent = 'Could not load mandala.';
+      }
+    }
+
+    // === Easing ===
+    function easeInOutSine(t) {
+      return -(Math.cos(Math.PI * t) - 1) / 2;
+    }
+
+    // === Apply scale: t from 0 (contracted) to 1 (expanded) ===
+    function applyScale(t) {
+      if (!outerBreathe) return;
+      const outerScale  = 0.80 + t * 0.28;
+      const middleScale = 0.84 + t * 0.21;
+      const innerScale  = 0.88 + t * 0.15;
+
+      const outerOp  = 0.90 - t * 0.12;
+      const middleOp = 0.88 - t * 0.08;
+      const innerOp  = 0.87 - t * 0.05;
+
+      outerBreathe.style.transform  = `scale(${outerScale})`;
+      middleBreathe.style.transform = `scale(${middleScale})`;
+      innerBreathe.style.transform  = `scale(${innerScale})`;
+      outerBreathe.style.opacity  = outerOp;
+      middleBreathe.style.opacity = middleOp;
+      innerBreathe.style.opacity  = innerOp;
+    }
+
+
+    // === Format time as M:SS ===
+    function formatTime(seconds) {
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60);
+      return m + ':' + s.toString().padStart(2, '0');
+    }
+
+    // === Update phase text ===
+    function setPhaseText(text) {
+      const el = document.getElementById('phase-text');
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.textContent = text;
+        el.style.opacity = '1';
+      }, 300);
+    }
+
+    function setSubText(text, show) {
+      const el = document.getElementById('phase-sub');
+      el.textContent = text;
+      el.style.opacity = show ? '1' : '0';
+    }
+
+    // =============================================
+    // Breathing loop — runs for targetRounds cycles
+    // =============================================
+    function breatheLoop(timestamp) {
+      if (engineState !== 'breathing') return;
+      if (!startTime) startTime = timestamp;
+
+      const p = currentPattern;
+      const totalCycle = p.inhale + p.hold1 + p.exhale + p.hold2;
+      const elapsed = (timestamp - startTime) / 1000;
+      const currentCycle = Math.floor(elapsed / totalCycle);
+      const cyclePos = elapsed % totalCycle;
+
+      // Check if we've completed all rounds
+      if (currentCycle >= targetRounds) {
+        enterTransition(timestamp);
+        return;
+      }
+
+      // Update cycle counter
+      const displayCycle = currentCycle + 1;
+      if (displayCycle !== cycles) {
+        cycles = displayCycle;
+        setSubText(`Round ${cycles} of ${targetRounds}`, true);
+      }
+
+      let t, phase, progressPct;
+
+      if (cyclePos < p.inhale) {
+        const raw = cyclePos / p.inhale;
+        t = easeInOutSine(raw);
+        phase = 'inhale';
+      } else if (cyclePos < p.inhale + p.hold1) {
+        t = 1;
+        phase = 'hold1';
+      } else if (cyclePos < p.inhale + p.hold1 + p.exhale) {
+        const raw = (cyclePos - p.inhale - p.hold1) / p.exhale;
+        t = 1 - easeInOutSine(raw);
+        phase = 'exhale';
+      } else {
+        t = 0;
+        phase = 'hold2';
+      }
+
+      progressPct = (cyclePos / totalCycle) * 100;
+      applyScale(t);
+      document.getElementById('progress-fill').style.width = progressPct + '%';
+
+      if (phase !== prevPhase) {
+        prevPhase = phase;
+        const labels = { inhale: 'Inhale', hold1: 'Hold', exhale: 'Exhale', hold2: 'Rest' };
+        setPhaseText(labels[phase]);
+      }
+
+      animFrame = requestAnimationFrame(breatheLoop);
+    }
+
+    // =============================================
+    // Transition — one final breath to reach the
+    // retention position (expanded or contracted)
+    // =============================================
+    function enterTransition(timestamp) {
+      if (retainAfter === 'none') {
+        enterComplete();
+        return;
+      }
+
+      engineState = 'transition';
+      const transitionStart = timestamp;
+      // If retaining after inhale: do one more inhale to reach expanded
+      // If retaining after exhale: do one more exhale to reach contracted
+      const isInhaleRetain = retainAfter === 'inhale';
+      const transitionDuration = isInhaleRetain
+        ? currentPattern.inhale * 1000
+        : currentPattern.exhale * 1000;
+
+      // We need to know where the mandala currently is
+      // At the end of the last round, we just finished hold2 or are mid-cycle
+      // For simplicity, smoothly animate to the target position
+      const startScale = isInhaleRetain ? 0 : 1;
+      const endScale = isInhaleRetain ? 1 : 0;
+
+      setPhaseText(isInhaleRetain ? 'Inhale deeply' : 'Exhale fully');
+      setSubText('Preparing to hold...', true);
+
+      function transitionLoop(ts) {
+        if (engineState !== 'transition') return;
+        const elapsed = ts - transitionStart;
+        const raw = Math.min(elapsed / transitionDuration, 1);
+        const eased = easeInOutSine(raw);
+        const t = startScale + (endScale - startScale) * eased;
+        applyScale(t);
+
+        if (raw >= 1) {
+          enterRetention();
+          return;
+        }
+        animFrame = requestAnimationFrame(transitionLoop);
+      }
+      animFrame = requestAnimationFrame(transitionLoop);
+    }
+
+    // =============================================
+    // Retention — mandala holds, timer counts up
+    // =============================================
+    function enterRetention() {
+      engineState = 'retention';
+      retentionStart = performance.now();
+      retentionDuration = 0;
+
+      // Hold mandala at position
+      applyScale(retainAfter === 'inhale' ? 1 : 0);
+
+      // UI: show retention overlay, dim controls
+      document.getElementById('retention-overlay').classList.remove('hidden');
+      document.getElementById('controls').style.opacity = '0.3';
+      document.getElementById('progress-section').style.opacity = '0.3';
+      setPhaseText(retainAfter === 'inhale' ? 'Retain' : 'Suspend');
+      setSubText('', false);
+
+      // Start retention timer
+      function retentionLoop() {
+        if (engineState !== 'retention') return;
+        retentionDuration = (performance.now() - retentionStart) / 1000;
+        document.getElementById('retention-timer').textContent = formatTime(retentionDuration);
+        animFrame = requestAnimationFrame(retentionLoop);
+      }
+      animFrame = requestAnimationFrame(retentionLoop);
+    }
+
+    // === Release retention (key/click/tap) ===
+    function releaseRetention() {
+      if (engineState !== 'retention') return;
+      engineState = 'complete';
+      cancelAnimationFrame(animFrame);
+
+      // Hide overlay
+      document.getElementById('retention-overlay').classList.add('hidden');
+      document.getElementById('controls').style.opacity = '1';
+      document.getElementById('progress-section').style.opacity = '1';
+
+      // Show result
+      setPhaseText('Released');
+      setSubText('', false);
+      document.getElementById('result-duration').textContent = formatTime(retentionDuration);
+      document.getElementById('result-rounds').textContent = targetRounds;
+      document.getElementById('session-result').classList.remove('hidden');
+
+      // Gently return mandala to neutral
+      const releaseStart = performance.now();
+      const from = retainAfter === 'inhale' ? 1 : 0;
+      const to = 0.5; // neutral resting position
+      function releaseAnim(ts) {
+        const raw = Math.min((ts - releaseStart) / 3000, 1); // 3s ease back
+        const eased = easeInOutSine(raw);
+        applyScale(from + (to - from) * eased);
+        if (raw < 1) requestAnimationFrame(releaseAnim);
+      }
+      requestAnimationFrame(releaseAnim);
+
+      // Reset button
+      const playBtn = document.getElementById('play-btn');
+      playBtn.textContent = 'Begin Again';
+    }
+
+    // === No retention — just complete ===
+    function enterComplete() {
+      engineState = 'complete';
+      cancelAnimationFrame(animFrame);
+      setPhaseText('Complete');
+      setSubText(targetRounds + ' rounds', true);
+      document.getElementById('session-result').classList.remove('hidden');
+      document.getElementById('result-duration').textContent = 'No retention';
+      document.getElementById('result-rounds').textContent = targetRounds;
+
+      const playBtn = document.getElementById('play-btn');
+      playBtn.textContent = 'Begin Again';
+    }
+
+    // === Listen for retention release ===
+    document.addEventListener('keydown', (e) => {
+      if (engineState === 'retention') {
+        e.preventDefault();
+        releaseRetention();
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (engineState === 'retention') {
+        releaseRetention();
+      }
+    });
+    document.addEventListener('touchstart', (e) => {
+      if (engineState === 'retention') {
+        releaseRetention();
+      }
+    });
+
+    // =============================================
+    // Controls
+    // =============================================
+
+    // === Play / Pause ===
+    const playBtn = document.getElementById('play-btn');
+    playBtn.addEventListener('click', (e) => {
+      // Don't trigger if we just released retention
+      if (engineState === 'retention') return;
+      e.stopPropagation();
+
+      if (engineState === 'breathing') {
+        // Pause
+        engineState = 'idle';
+        cancelAnimationFrame(animFrame);
+        playBtn.textContent = 'Resume';
+        document.getElementById('phase-text').style.opacity = '0.4';
+      } else {
+        // Start / Resume
+        engineState = 'breathing';
+        startTime = null;
+        prevPhase = null;
+        cycles = 0;
+        document.getElementById('session-result').classList.add('hidden');
+        document.getElementById('phase-text').style.opacity = '1';
+        playBtn.textContent = 'Pause';
+        animFrame = requestAnimationFrame(breatheLoop);
+      }
+    });
+
+    // === Presets ===
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const preset = btn.dataset.preset;
+        const customPanel = document.getElementById('custom-controls');
+        if (preset === 'custom') {
+          customPanel.classList.remove('hidden');
+          syncCustomFromSliders();
+        } else {
+          customPanel.classList.add('hidden');
+          currentPattern = { ...PRESETS[preset] };
+        }
+
+        if (engineState === 'breathing') {
+          startTime = null;
+          prevPhase = null;
+          cycles = 0;
+        }
+        updateHoldLabels();
+      });
+    });
+
+    // === Custom sliders ===
+    ['inhale', 'hold1', 'exhale', 'hold2'].forEach(key => {
+      const slider = document.getElementById('slider-' + key);
+      const display = document.getElementById('val-' + key);
+      if (!slider) return;
+      slider.addEventListener('input', () => {
+        display.textContent = slider.value;
+        syncCustomFromSliders();
+      });
+    });
+
+    function syncCustomFromSliders() {
+      currentPattern = {
+        inhale: parseInt(document.getElementById('slider-inhale').value),
+        hold1:  parseInt(document.getElementById('slider-hold1').value),
+        exhale: parseInt(document.getElementById('slider-exhale').value),
+        hold2:  parseInt(document.getElementById('slider-hold2').value),
+      };
+      if (engineState === 'breathing') {
+        startTime = null;
+        prevPhase = null;
+        cycles = 0;
+      }
+      updateHoldLabels();
+    }
+
+    // === Rounds +/- ===
+    const roundsVal = document.getElementById('rounds-val');
+    document.getElementById('rounds-down').addEventListener('click', (e) => {
+      e.stopPropagation();
+      targetRounds = Math.max(1, targetRounds - 1);
+      roundsVal.textContent = targetRounds;
+    });
+    document.getElementById('rounds-up').addEventListener('click', (e) => {
+      e.stopPropagation();
+      targetRounds = Math.min(30, targetRounds + 1);
+      roundsVal.textContent = targetRounds;
+    });
+
+    // === Retain after toggle ===
+    document.querySelectorAll('.retain-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.querySelectorAll('.retain-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (btn.id === 'retain-inhale') retainAfter = 'inhale';
+        else if (btn.id === 'retain-exhale') retainAfter = 'exhale';
+        else retainAfter = 'none';
+      });
+    });
+
+    // === Init ===
+    loadMandala();
+  </script>
+</BaseLayout>
